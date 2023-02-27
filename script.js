@@ -88,6 +88,23 @@ document.addEventListener('keydown', e => {
 
 
   // navbar script from chatgpr
+// Get the navbar element
+const navbar = document.querySelector('nav');
+
+// Get the offset position of the navbar
+const sticky = navbar.offsetTop;
+
+// Function to add or remove the "sticky" class
+function toggleSticky() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');
+  }
+}
+
+// Add a scroll event listener to toggle the "sticky" class
+window.addEventListener('scroll', toggleSticky);
 
 
 // navbar script end from cht Gpt/
