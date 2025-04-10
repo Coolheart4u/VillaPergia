@@ -119,66 +119,98 @@ nav ul li a:hover::after {
 }
 
 /* ========== Mobile Navbar ========== */
-@media (max-width: 768px) {
-  nav {
-    padding-top: 2rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle {
-    display: block;  /* Show hamburger icon on mobile */
-  }
-
-  nav ul {
-    width: 100%;
-    display: none;
-    flex-direction: column;
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem 0;
-    z-index: 999;
-    margin-top: 5rem;
-  }
+    padding-top: 5rem;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+}
 
-  nav ul.show {
-    display: flex; /* Show the menu when 'show' class is added */
-  }
+/* Menu toggle (hamburger) */
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    position: sticky;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    z-index: 1000;
+}
 
-  nav ul li {
-    margin: 2rem 0;
-  }
+nav ul {
+    display: flex;
+}
 
-  nav ul li a {
-    font-size: 2rem;
+nav ul li {
+    list-style: none;
+    margin: 0 3rem;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 2px;
     color: darksalmon;
-  }
+}
 
-  .brand {
-    font-size: 2.5rem;
-    padding-left: 1rem;
-  }
-
-  .overlay {
-    display: none;
+/* Mobile Menu */
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-  }
-
-  .overlay.show {
-    display: block;
-  }
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 999;
 }
 
+nav ul.show {
+    display: block; /* Show the menu */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+nav ul li {
+    margin: 2rem 0;
+}
+
+nav ul li a {
+    font-size: 2rem;
+    color: darksalmon;
+}
+
+/* Sticky Navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Show on small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none; /* Hide menu by default on small screens */
+    }
+}
 /* ========== Prevent Screen Movement ========== */
 html, body {
   max-width: 100%;
