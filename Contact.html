@@ -1,46 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9VL5H3MKV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9VL5H3MKV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y9VL5H3MKV');
+    </script>
+    <title>Villa Pergia Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  gtag('config', 'G-Y9VL5H3MKV');
-</script>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">    
-<script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
-    </head>
-        <body>
-            <h1>Villa Pergia</h1>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">    
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .address, .email {
+            text-align: center;
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Villa Pergia</h1>
+        <div class="address">
             <p>Petrou Christou 9</p>
-            <p>Neo Chorio </p>
-            <p>Paphos</p>
-            <p>Cyprus</p>
-            <p></p>
-            <p>contact@villapergia.com</p>
+            <p>Neo Chorio</p>
+            <p>Paphos, Cyprus</p>
+        </div>
+        <div class="email">
+            <p><i class="fas fa-envelope"></i> contact@villapergia.com</p>
+        </div>
         <hr>
+
         <form action="https://formsubmit.co/contact@villapergia.com" method="POST">
-    <label>Your Name:</label>
-    <input type="text" name="name" required><br>
-    
-    <label>Your Email:</label>
-    <input type="email" name="email" required><br>
-    
-    <label>Your message:</label><br>
-    <textarea name="message" cols="30" rows="10" required></textarea><br>
-    
-    <input type="submit" value="Send">
-</form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-            </body>
-        </html>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
 
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+</body>
+</html>
