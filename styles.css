@@ -826,3 +826,26 @@ p {
 }
 
 /* END house rules  */
+
+/* Style the footer */
+.footer {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center;      /* Center the text */
+    padding: 20px;           /* Add padding around the footer */
+    background-color: #333;  /* Optional: Set background color */
+    color: white;            /* Optional: Set text color */
+}
+
+.footer .social-icon {
+    margin: 0 10px; /* Space between icons */
+    font-size: 24px; /* Adjust icon size */
+}
+
+.footer p {
+    margin-top: 10px; /* Space between paragraphs */
+    font-size: 14px;  /* Adjust text size */
+}
+
