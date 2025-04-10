@@ -1,402 +1,175 @@
-/* ========== Reset & Base Styles ========== */
+/* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
 }
 
+/* Body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
 header {
-    background-color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    position: relative;
+    background: #333;
+    color: white;
+    padding: 10px;
 }
 
-/* ========== Typography ========== */
-h1 {
-  font-family: "Montserrat";
-  text-align: center;
-  margin: 50px 0;
-}
-
-h2 {
-  padding: 40px 0 30px;
-  color: #60777c;
-}
-
-p {
-  margin: 0;
-}
-
-/* ========== Navbar ========== */
 .menu-toggle {
-  position: sticky;
-  top: 2.5rem;
-  right: 2.5rem;
-  font-size: 3rem;
-  color: black;
-  cursor: pointer;
-  z-index: 1000;
-  display: none;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 5rem;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-}
-
-nav ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  list-style: none;
-  margin: 0 3rem;
-}
-
-nav ul li a {
-  position: relative;
-  text-decoration: none;
-  letter-spacing: 2px;
-  color: darksalmon;
-}
-
-nav ul li a::before,
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: crimson;
-  left: 0;
-  transform: scaleX(0);
-  transition: all 0.5s;
-}
-
-nav ul li a::before {
-  top: 0;
-  transform-origin: left;
-}
-
-nav ul li a::after {
-  bottom: 0;
-  transform-origin: right;
-}
-
-nav ul li a:hover::before,
-nav ul li a:hover::after {
-  transform: scaleX(1);
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .brand {
-  margin-left: 20px;
-  font-size: 3rem;
-  font-weight: 300;
+    font-size: 24px;
 }
 
-.brand span {
-  color: crimson;
-}
-
-/* ========== Mobile Navbar ========== */
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 5rem;
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    position: relative;
-}
-
-/* Menu toggle (hamburger) */
-.menu-toggle {
-    display: none; /* Hidden by default on larger screens */
-    position: sticky;
-    top: 2.5rem;
-    right: 2.5rem;
-    font-size: 3rem;
-    color: black;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    list-style: none;
-    margin: 0 3rem;
-}
-
-nav ul li a {
-    position: relative;
+.brand a {
+    color: white;
     text-decoration: none;
-    letter-spacing: 2px;
-    color: darksalmon;
+    font-weight: bold;
 }
 
-/* Mobile Menu */
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-nav li {
+    margin-left: 15px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    display: block;
+}
+
+/* Hamburger Menu (for small screens) */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.7);
     display: none;
-    z-index: 999;
+    z-index: 10;
 }
 
-nav ul.show {
-    display: block; /* Show the menu */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
+.container1 {
+    z-index: 15;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    z-index: 1001;
 }
 
-nav ul li {
-    margin: 2rem 0;
-}
-
-nav ul li a {
-    font-size: 2rem;
-    color: darksalmon;
-}
-
-/* Sticky Navbar */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-/* Show on small screens */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
 
-    nav ul {
-        display: none; /* Hide menu by default on small screens */
+    .navbar-nav {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav a {
+        padding: 10px;
+        border-top: 1px solid #444;
+    }
+
+    .navbar-nav.show {
+        display: block;
+    }
+
+    .overlay.show {
+        display: block;
     }
 }
-/* ========== Prevent Screen Movement ========== */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
 
-body {
-  padding: 0;
-  margin: 0;
-}
-
-/* ========== Additional Styles for Footer ========== */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #333;
-  color: #fff;
-}
-
-
-/* ========== Header / Hero Section ========== */
-header {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.024), rgba(0, 0, 0, 0)),
-    url("https://upload.wikimedia.org/wikipedia/commons/8/81/Latchi_harbour.jpg") center no-repeat;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-}
-
-/* ========== Layout Containers ========== */
-.container1,
-.containerAMEN {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section2container,
-.flip-card,
-.card {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.section2container {
-  background-color: #ccc;
-  width: 550px;
-  margin-top: 100px;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.gap {
-  width: 100%;
-  padding: 40px;
-  overflow: hidden;
-  position: relative;
-}
-
-/* ========== Typography Blocks ========== */
-.slogan, .sloganright {
-  height: 100%;
-  margin-bottom: 10px;
-  padding: 3px;
-  font-size: 3.5rem;
-  font-weight: 600;
-  font-family: "Montserrat";
-  text-align: center;
-  color: #ccc;
-  float: left;
-}
-
-.slogan {
-  display: block;
-  margin-left: 110px;
+/* Hero Image */
+.layout {
+    width: 100%;
+    height: 100vh;
+    background-image: url('24052011 082.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .sloganright {
-  display: none;
-  margin-left: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 30px;
 }
 
-/* ========== Image Gallery ========== */
+/* Section */
+.section2container {
+    padding: 40px;
+    text-align: center;
+}
+
+.section2container img {
+    max-width: 100%;
+}
+
+.division {
+    text-align: center;
+}
+
+.villa {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gallery Section */
+.imgscontain {
+    text-align: center;
+}
+
+.responsive {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  grid-gap: 50px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  height: 100vh;
-  overflow: auto;
-  background-color: #423F3E;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+    margin: 10px;
 }
 
-.item img,
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s ease-in-out;
+.desc {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
-.item:hover img,
-.responsive:hover {
-  transform: scale(1.05);
-  transition: transform 0.6s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* ========== Flip Cards ========== */
-.flip-card {
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  margin: 20px;
-  border-radius: 30px;
-}
-
-.flip-card-inner {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.9s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-  background-color: #333;
-  color: white;
-}
-
-/* ========== Responsive Styles ========== */
-@media screen and (max-width: 1000px) {
-  .villa {
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    background-color: #ccc;
-  }
-
-  .section2container {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 667px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100vh;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin-top: 1rem;
-  }
-
-  nav ul li a {
-    font-size: 2rem;
-    margin: 0;
-  }
 }
