@@ -73,7 +73,43 @@ document.addEventListener('keydown', e => {
     }
 });
 
-// Sticky navbar functionality (unchanged)
+// Get the hamburger icon and menu toggle state
+var open = document.getElementById('hamburger');
+var changeIcon = true;
+
+// When the hamburger icon is clicked
+open.addEventListener("click", function() {
+    var overlay = document.querySelector('.overlay');
+    var nav = document.querySelector('nav');
+    var icon = document.querySelector('.menu-toggle i');
+    var ul = nav.querySelector('ul');
+
+    // Toggle menu and overlay visibility
+    overlay.classList.toggle("show");
+    ul.classList.toggle("show");
+
+    // Toggle the icon between hamburger and close
+    if (changeIcon) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+        changeIcon = false;
+    } else {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+        changeIcon = true;
+    }
+});
+
+// Close menu when clicking on the overlay
+document.querySelector('.overlay').addEventListener('click', function() {
+    document.querySelector('.overlay').classList.remove("show");
+    document.querySelector('nav ul').classList.remove("show");
+    document.querySelector('.menu-toggle i').classList.remove("fa-times");
+    document.querySelector('.menu-toggle i').classList.add("fa-bars");
+    changeIcon = true;
+});
+
+// Sticky Navbar
 const navbar = document.querySelector('nav');
 const sticky = navbar.offsetTop;
 
@@ -84,5 +120,8 @@ function toggleSticky() {
         navbar.classList.remove('sticky');
     }
 }
+
+window.addEventListener('scroll', toggleSticky);
+
 
 window.addEventListener('scroll', toggleSticky);
