@@ -1,131 +1,111 @@
-// Grab the hamburger menu icon and related elements
 var open = document.getElementById('hamburger');
 var changeIcon = true;
 
-open.addEventListener("click", function() {
-    // Elements to toggle
+open.addEventListener("click", function(){
+
     var overlay = document.querySelector('.overlay');
     var nav = document.querySelector('nav');
     var icon = document.querySelector('.menu-toggle i');
 
-    // Toggle the overlay and navbar visibility
-    overlay.classList.toggle("show");
-    nav.querySelector('ul').classList.toggle("show");
+    overlay.classList.toggle("menu-open");
+    nav.classList.toggle("menu-open");
 
-    // Toggle the hamburger icon to a close (X) icon and vice versa
     if (changeIcon) {
-        // Switch to the close icon (fa-times)
         icon.classList.remove("fa-bars");
         icon.classList.add("fa-times");
+
         changeIcon = false;
-    } else {
-        // Switch back to the hamburger icon (fa-bars)
+    }
+    else {
         icon.classList.remove("fa-times");
         icon.classList.add("fa-bars");
         changeIcon = true;
     }
 });
 
-// Gallery functions (unchanged)
+
+// START In the GAllery
+
+// Open overlay when image is clicked
 document.querySelectorAll('.item').forEach(item => {
     item.addEventListener('click', e => {
-        const imgSrc = e.target.getAttribute('src');
-        document.querySelector('.overlay-image').setAttribute('src', imgSrc);
-        document.querySelector('.overlay').style.display = 'flex';
-        document.querySelector('body').style.overflow = 'hidden';
+      const imgSrc = e.target.getAttribute('src');
+      document.querySelector('.overlay-image').setAttribute('src', imgSrc);
+      document.querySelector('.overlay').style.display = 'flex';
+      document.querySelector('body').style.overflow = 'hidden';
     });
-});
-
-// Close overlay when close button is clicked
-document.querySelector('.close').addEventListener('click', e => {
+  });
+  
+  // Close overlay when close button is clicked
+  document.querySelector('.close').addEventListener('click', e => {
     document.querySelector('.overlay').style.display = 'none';
     document.querySelector('body').style.overflow = 'auto';
-});
-
-// Navigation Gallery Next/Previous functionality
+  });
+  
+  // Previous and next buttons
+  // Get all images in the gallery
 const images = document.querySelectorAll('.item img');
+
+// Set index of current image
 let currentIndex = 0;
 
+// Show next image
 function showNextImage() {
-    currentIndex++;
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-    const imgSrc = images[currentIndex].getAttribute('src');
-    document.querySelector('.overlay-image').setAttribute('src', imgSrc);
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  const imgSrc = images[currentIndex].getAttribute('src');
+  document.querySelector('.overlay-image').setAttribute('src', imgSrc);
 }
 
+// Show previous image
 function showPrevImage() {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    }
-    const imgSrc = images[currentIndex].getAttribute('src');
-    document.querySelector('.overlay-image').setAttribute('src', imgSrc);
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
+  const imgSrc = images[currentIndex].getAttribute('src');
+  document.querySelector('.overlay-image').setAttribute('src', imgSrc);
 }
 
+// Bind previous and next buttons to functions
 document.querySelector('.prev').addEventListener('click', showPrevImage);
 document.querySelector('.next').addEventListener('click', showNextImage);
 
-// Bind left and right arrow keys to gallery navigation
+// Bind left and right arrow keys to functions
 document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowLeft') {
-        showPrevImage();
-    }
-    if (e.key === 'ArrowRight') {
-        showNextImage();
-    }
+  if (e.key === 'ArrowLeft') {
+    showPrevImage();
+  }
+  if (e.key === 'ArrowRight') {
+    showNextImage();
+  }
 });
 
-// Get the hamburger icon and menu toggle state
-var open = document.getElementById('hamburger');
-var changeIcon = true;
+// END inthe Gallery
 
-// When the hamburger icon is clicked
-open.addEventListener("click", function() {
-    var overlay = document.querySelector('.overlay');
-    var nav = document.querySelector('nav');
-    var icon = document.querySelector('.menu-toggle i');
-    var ul = nav.querySelector('ul');
 
-    // Toggle menu and overlay visibility
-    overlay.classList.toggle("show");
-    ul.classList.toggle("show");
 
-    // Toggle the icon between hamburger and close
-    if (changeIcon) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
-        changeIcon = false;
-    } else {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-        changeIcon = true;
-    }
-});
-
-// Close menu when clicking on the overlay
-document.querySelector('.overlay').addEventListener('click', function() {
-    document.querySelector('.overlay').classList.remove("show");
-    document.querySelector('nav ul').classList.remove("show");
-    document.querySelector('.menu-toggle i').classList.remove("fa-times");
-    document.querySelector('.menu-toggle i').classList.add("fa-bars");
-    changeIcon = true;
-});
-
-// Sticky Navbar
+  // navbar script from chatgpr
+// Get the navbar element
 const navbar = document.querySelector('nav');
+
+// Get the offset position of the navbar
 const sticky = navbar.offsetTop;
 
+// Function to add or remove the "sticky" class
 function toggleSticky() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add('sticky');
-    } else {
-        navbar.classList.remove('sticky');
-    }
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');
+  }
 }
 
+// Add a scroll event listener to toggle the "sticky" class
 window.addEventListener('scroll', toggleSticky);
 
 
-window.addEventListener('scroll', toggleSticky);
+// navbar script end from cht Gpt/
+
