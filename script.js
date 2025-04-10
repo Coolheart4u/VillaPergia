@@ -1,7 +1,9 @@
+// Grab the hamburger menu icon and related elements
 var open = document.getElementById('hamburger');
 var changeIcon = true;
 
 open.addEventListener("click", function() {
+    // Elements to toggle
     var overlay = document.querySelector('.overlay');
     var nav = document.querySelector('nav');
     var icon = document.querySelector('.menu-toggle i');
@@ -12,10 +14,12 @@ open.addEventListener("click", function() {
 
     // Toggle the hamburger icon to a close (X) icon and vice versa
     if (changeIcon) {
+        // Switch to the close icon (fa-times)
         icon.classList.remove("fa-bars");
         icon.classList.add("fa-times");
         changeIcon = false;
     } else {
+        // Switch back to the hamburger icon (fa-bars)
         icon.classList.remove("fa-times");
         icon.classList.add("fa-bars");
         changeIcon = true;
