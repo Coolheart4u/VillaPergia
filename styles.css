@@ -1,33 +1,147 @@
-body{background-color:#2B2B2B;
-margin:auto;
-text-align:center;}
+/* ========== Reset & Base Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-h1 {font-family:"Montserrat"}
+html {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
 
+body {
+  background-color: #2B2B2B;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #ccc;
+}
 
-.navbar-brand {font-size: 3rem;}
-.navbar-nav{font-family: Arial, Helvetica, sans-serif;}
+/* ========== Typography ========== */
+h1 {
+  font-family: "Montserrat";
+  text-align: center;
+  margin: 50px 0;
+}
 
-/* ///////////// */
+h2 {
+  padding: 40px 0 30px;
+  color: #60777c;
+}
 
-/* begin breadcrumbs */
+p {
+  margin: 0;
+}
 
-
-/* END breadcrumbs */
-
-
-.sloganright{height:100%;
+/* ========== Navbar ========== */
+.menu-toggle {
+  position: sticky;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  color: black;
+  cursor: pointer;
+  z-index: 1000;
   display: none;
-  margin-bottom:10px;
-  margin-left:700px;
-  padding:3px;
-font-size: 3.5rem;
-font-weight:600;
-border-radius:10px;
-text-align:center;
-font-family:"Montserrat";
-float:left;
-color:#CCC; }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 3rem;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: darksalmon;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: crimson;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+
+nav ul li a::before {
+  top: 0;
+  transform-origin: left;
+}
+
+nav ul li a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.brand {
+  margin-left: 20px;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.brand span {
+  color: crimson;
+}
+
+/* ========== Header / Hero Section ========== */
+header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.024), rgba(0, 0, 0, 0)),
+    url("https://upload.wikimedia.org/wikipedia/commons/8/81/Latchi_harbour.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========== Layout Containers ========== */
+.container1,
+.containerAMEN {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section2container,
+.flip-card,
+.card {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.section2container {
+  background-color: #ccc;
+  width: 550px;
+  margin-top: 100px;
+  padding: 10px;
+  border-radius: 10px;
+}
 
 .gap {
   width: 100%;
@@ -35,613 +149,31 @@ color:#CCC; }
   overflow: hidden;
   position: relative;
 }
-.image {
-  width: 40%;
-  height: 40%;
-  margin-left: 0px;
-  margin-top: -15px;
-  animation: MOVE-BG 12s linear infinite alternate;
-  animation-name: MOVE-BG;
-  animation-duration: 12s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction:alternate;
-  animation-fill-mode:none;
-  animation-play-state: running;  
-}
 
-.image-wrapper{width:100%;}
-
-@keyframes MOVE-BG {
-	0% {
-    transform: scale(1) translate(0, 0);
-  }
-	50% {
-    transform: scale(0.99) translate(1px, 5px);
-  }
-  100% {
-    transform: scale(1.11) translate(-5px,5px);
-  }
-}
-/* moving picture end  */
-
-.slogan{height:100%;
-        display: block;
-        margin-bottom:10px;
-        margin-left:110px;
-        margin-top:auto;
-        padding:3px;
-    font-size: 3.5rem;
-    font-weight:600;
-    border-radius:solid 10px;
-    text-align:center;
-    font-family:"Montserrat";
-    float:left;
-    color:#ccc;
- }
-
- .villa{
-    margin-right: auto;
-    border:20px solid ;
-    border-radius:10px;
-    padding: 10px;
-    float:center;
- }
-
- @media screen and (max-width: 1000px) {
-    .villa {
-      width: 100%;
-      background-color: #ccc;
-      
-    }
-  }
-
- .section2container{
-    display:inline-flex;
-    height:auto;
-    width:550px;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:center;
-    background-color:#ccc;
-    margin-top:100px;
-    padding:10px;
-    border-radius:10px;
-}
-
-.description{color:#ccc;
-font-family: "Montserrat";
-margin:80px 40px 40px 30px;
-text-align: justify;
-
-}
-
-
-.pictures{display:block;
-  width:100%;
-}
-
-@media screen and (max-width: 100px) {
-  .section2container {
-    width: 100%;
-    background-color: #ccc;
-  }
-}
-
-
-h2{padding-top:40px;
-    padding-bottom: 30px;
-color:#60777c;
-}
-
-
-.titles {
-    display: inline-flex;
-    max-width: 100px;
-    height: auto;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.social-icon{margin:20px 10px;}
-
-.footer{
-  padding: 50px;
-background-color: #F38181;
-margin-top:100px;}
-
-
-/* CAROUSEL */
-
-/* END CAROUSEL */
-
-
-/* BEGINNING OF NAVBAR  */
-
- *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html{
-	font-size: 15px;
-	font-family: "Roboto Cn", sans-serif;
-}
-
-a{
-	text-decoration: none;
-	color:darksalmon;
-}
- 
-
-header{
-	width: 100%;
-	height: 100vh;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.024), rgba(0, 0, 0, 0)), url("https://upload.wikimedia.org/wikipedia/commons/8/81/Latchi_harbour.jpg") center no-repeat;
-	background-size:cover;
-	position:relative;
-  overflow:hidden;
-}
-
-
-.container1{  
-	max-width: 120rem;
-	width: 90%;
-	margin: 0 auto;
-}
-
-.menu-toggle{
-	position:sticky;
-	top: 2.5rem;
-	right: 2.5rem;
-	color:Black;;
-	font-size: 3rem;
-	cursor: pointer;
-	z-index: 1000;
-	display: none;
-}
-
-
-
-nav{
-	padding-top: 5rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	text-transform: uppercase;
-	font-size: 1.6rem;
-}
-
-.brand{
-	margin-left:20px;
-  font-size: 3rem;
-	font-weight: 300;
-	transform: translateX(-100rem);
-	animation: slideIn .5s forwards;
-}
-
-.brand span{
-	color: crimson;
-}
-
-nav ul{
-	display: flex;
-}
-
-nav ul li{
-	list-style: none;
-	transform: translateX(100rem);
-	animation: slideIn .5s forwards;
-}
-
-nav ul li:nth-child(1){
-	animation-delay: 0s;
-}
-
-nav ul li:nth-child(2){
-	animation-delay: .5s;
-}
-
-nav ul li:nth-child(3){
-	animation-delay: 1s;
-}
-
-nav ul li:nth-child(4){
-	animation-delay: 1.5s;
-}
-
-nav ul li a{
-	padding: 1rem 0;
-	margin: 0 3rem;
-	position: relative;
-	letter-spacing: 2px;
-}
-
-nav ul li a:last-child{
-	margin-right: 4px;
-}
-
-nav ul li a::before,
-nav ul li a::after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	background-color: crimson;
-	left: 0;
-	transform: scaleX(0);
-	transition: all .5s;
-}
-
-nav ul li a::before{
-	top: 0;
-	transform-origin: left;
-}
-
-nav ul li a::after{
-	bottom: 0;
-	transform-origin: right;
-}
-
-.overlay{
-	background-color: rgba(0, 0, 0, 0.5s);
-	position: fixed;
-	right: 0;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	transition: opacity 650ms;
-	transform: scale(0);
-	opacity: 0;
-  display: block;
-}
-
-nav ul li a:hover::before,
-nav ul li a:hover::after{
-	transform: scaleX(1);
-}
-
-@keyframes slideIn {
-	from{
-
-	}
-	to{
-		transform: translateX(0);
-	}
-}
-
-@media screen and (max-width: 667px){
-
-	.menu-toggle{
-		display: block;
-	}
-
-	nav{
-		padding-top: 0;
-		display: none;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-		height: 100vh;
-		text-align: center;
-	}
-
-	nav ul{
-		flex-direction: column;
-	}
-
-	nav ul li{
-		margin-top: 1rem;
-	}
-
-	nav ul li a{
-		margin: 0;
-		font-size: 2rem;
-	}
-
-	.brand{
-		font-size: 3rem;
-	}
-  
-  .overlay menu-open,
-  nav.menu-open{
-	  display: flex;
-	  transform: scale(1);
-	  opacity: 1;
-  }
-  
-}
-/* END OF NAV BAR  */
-
-/* NAVBAR FOR SMALLER SCREENS GPT */
-
-/* END OF NAVBAR FOR SMALLER SCREENS */
-
-
-
-
-
-/* Beginning of image gallery */
-
-.imgscontain{padding-top:100px;
-background-color:#423F3E;}
-
-div.gallery {
-  border: 1px solid #777;
-}
-
-div.gallery:hover {
-  border: 1px solid #CCc;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
+/* ========== Typography Blocks ========== */
+.slogan, .sloganright {
+  height: 100%;
+  margin-bottom: 10px;
+  padding: 3px;
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: "Montserrat";
   text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 0 6px;
+  color: #ccc;
   float: left;
-  width: 24.99999%;}
-
-  .responsive:hover {
-    transform:scale(1.2);
-    transition: transform 0.1s;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      transition: transform 0.6s ease-in-out;
-    }
-    
-    .card:hover {
-      transform: translateY(-20px);
-    }
-    
-    
 }
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 100%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
- end of image gallery  */
-
-
-/* flip image  */
-
-
-body {
-  font-family:"Montserrat";
-}
-
-.Whattodo{color:#Ccc;}
-
-.flip-card { display:inline-flex;
-  height:auto;
-  width:550px;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  margin:20px;
-  border-radius:30px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.9s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-
-  color: black;
-}
-
-.flip-card-back {
-  background-color: ;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-/* end of flip image  */
-
-.imgscontain{background-color:#423F3E;
-color:#ccc}
-
-/* begining of box move ForWARD */
-.gallery {
-  box-shadow: 0 4px 20px 0 rgba(0,0,0,0.2);
-  transition: 0.9s;
-  width: 100%;
-  border-radius:20px;
-  font-family:"Montserrat";
-  background-color:#423F3E
-}
-img{border-radius:12px;}
-
-.gallery:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-
-/* end of FORWARD BOX  */
-
-/* container-flip beginning */
-
-.container-flip{display:flex;}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-section {
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 140px 0; 
-  
-}
-
-.card {
-  position: relative;
-  min-width: 300px;
-  height: auto;
-  overflow: hidden;
-  border-radius: 15px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-  transition: .5s;
-}
-.card:hover {
-  transform:scale(1.1);
-}
-.card_red, .card_red .title .fa {
-  background: linear-gradient(-45deg, #ffec61, #f321d7);
-}
-.card_violet, .card_violet .title .fa  {
-  background: linear-gradient(-45deg, #f403d1, #64b5f6);
-}
-.card_three, .card_three .title .fa  {
-  background: linear-gradient(-45deg, #24ff72, #9a4eff);
-}
-
-.card:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: rgba(255, 255, 255, .1);
-  z-index: 1;
-  transform: skewY(-5deg) scale(1.5);
-}
-
-.title .fa {
-  color: #fff;
-  font-size: 60px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 100px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
-}
-.title h2 {
-  position: relative;
-  margin: 20px 0 0;
-  padding: 0;
-  color: #fff;
-  font-size: 28px;
-  z-index: 2;
-}
-.price {
-  position: relative;
-  z-index: 2;
-}
-.price h4 {
-  margin: 0;
-  padding: 20px 0;
-  color: #fff;
-  font-size: 60px;
-}
-.option {
-  position: relative;
-  z-index: 2;
-}
-.option ul {
-  margin: 0;
-  padding: 0;
-}
-.option ul li {
-  margin: 0 0 10px;
-  padding: 0;
-  list-style: none;
-  color: #fff;
-  font-size: 16px;
-}
-.card a {
+.slogan {
   display: block;
-  position: relative;
-  z-index: 2;
-  background-color: #fff;
-  color: #262ff;
-  width: 150px;
-  height: 40px;
-  text-align: center;
-  margin: 20px auto 0;
-  line-height: 40px;
-  border-radius: 40px;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 5px 10px rgba(0,0,0, .1);
- }
-
-
-/* Pictures.html page  */
-
-
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  margin-left: 110px;
 }
 
+.sloganright {
+  display: none;
+  margin-left: 700px;
+}
+
+/* ========== Image Gallery ========== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -651,176 +183,96 @@ body {
   padding: 20px;
   height: 100vh;
   overflow: auto;
+  background-color: #423F3E;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 }
 
-.item {
-  position: relative;
-  overflow: hidden;
-}
-
-.item img {
+.item img,
+.gallery img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  border-radius: 12px;
   transition: transform 0.3s ease-in-out;
 }
 
-.item:hover img {
+.item:hover img,
+.responsive:hover {
   transform: scale(1.05);
+  transition: transform 0.6s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* ========== Flip Cards ========== */
+.flip-card {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.flip-card-inner {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.overlay.show {
-  opacity: 1;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.overlay-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.close {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #333;
   color: white;
-  cursor: pointer;
 }
 
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-.prev {
-  left: 20px;
-}
-
-.next {
-  right: 20px;
-}
-
-@media (max-width: 767px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    grid-gap: 0;
-    max-width: none;
-    padding: 0;
-  }
-  
-  .item img {
-    height: 100vh;
-    width: 100vw;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* ========== Responsive Styles ========== */
+@media screen and (max-width: 1000px) {
+  .villa {
     width: 100%;
-    height: 100%;
+    background-color: #ccc;
   }
-  
-  .close,
-  .prev,
-  .next {
-    font-size: 16px;
+
+  .section2container {
+    width: 100%;
   }
 }
 
-/* end Pictures.html page  */
+@media screen and (max-width: 667px) {
+  .menu-toggle {
+    display: block;
+  }
 
-/* START Amenities */
+  nav {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+  }
 
-h1 {
-  text-align: center;
-  margin: 50px 0;
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-top: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 2rem;
+    margin: 0;
+  }
 }
-
-.containerAMEN {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.facilities {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 30px;
-  margin-top: 50px;
-}
-
-.facility {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  text-align: center;
-}
-
-.facility h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-}
-
-.facility ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-.facility li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #666;
-}
-
-.facility li:before {
-  content: "•";
-  margin-right: 10px;
-  color: #999;
-}
-
-
-/* END amenities */
-
-/* START House rules  */
-
-
-
-
-p {
-  margin: 0;
-}
-
-.bold {text-align:left;
-  font-weight: bold;
-  color:white;
-}
-
-/* END house rules  */
