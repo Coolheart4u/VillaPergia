@@ -1,98 +1,196 @@
-<style>
-    body {
-        margin: 0;
-        font-family: 'Montserrat', sans-serif;
-        background-color: #fff3e0; /* Light orange background */
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9VL5H3MKV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y9VL5H3MKV');
+    </script>
 
-    .gallery {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Villa Pergia Gallery</title>
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 15px;
-    }
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">    
+    <script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
 
-    .item {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 4 / 3; /* Keeps all items the same ratio */
-        overflow: hidden;
-        border-radius: 10px;
-    }
+    <!-- Inline CSS for simplicity -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fff3e0;
+        }
 
-    .item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-    }
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-    .item img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
 
-    .overlay {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.8);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-    }
+        .item {
+            position: relative;
+            width: 100%;
+            padding-top: 75%; /* 4:3 Aspect Ratio */
+            overflow: hidden;
+            border-radius: 10px;
+        }
 
-    .overlay-inner {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-    }
+        .item img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
 
-    .overlay-image {
-        width: 100%;
-        max-height: 80vh;
-        object-fit: contain;
-        border-radius: 10px;
-    }
+        .item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
 
-    .prev, .next, .close {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-        font-size: 2rem;
-        background-color: rgba(0,0,0,0.5);
-        padding: 10px 15px;
-        cursor: pointer;
-        border-radius: 5px;
-        user-select: none;
-    }
-
-    .prev { left: -60px; }
-    .next { right: -60px; }
-    .close {
-        top: -50px;
-        right: 0;
-        font-size: 2.5rem;
-    }
-
-    @media (max-width: 768px) {
-        .prev, .next {
+        .overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
             display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
         }
 
-        .close {
-            top: 10px;
-            right: 20px;
+        .overlay-inner {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
         }
-    }
+
+        .overlay-image {
+            width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .prev, .next, .close {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 2rem;
+            background-color: rgba(0,0,0,0.5);
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            user-select: none;
+        }
+
+        .prev { left: -60px; }
+        .next { right: -60px; }
+        .close {
+            top: -50px;
+            right: 0;
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .prev, .next {
+                display: none;
+            }
+
+            .close {
+                top: 10px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery">
+        <div class="grid">
+            <div class="item"><img src="best pic.jpeg" alt="Best Picture"></div>
+            <div class="item"><img src="9 meters pool 3.JPG" alt="Pool"></div>
+            <div class="item"><img src="room upstairs views 2.JPG" alt="Room View"></div>
+            <div class="item"><img src="24052011 026.JPG" alt="Image 1"></div>
+            <div class="item"><img src="24052011 032.JPG" alt="Image 2"></div>
+            <div class="item"><img src="24052011 041.JPG" alt="Image 3"></div>
+            <div class="item"><img src="24052011 057.JPG" alt="Image 4"></div>
+            <div class="item"><img src="24052011 059.JPG" alt="Image 5"></div>
+            <div class="item"><img src="24052011 065.JPG" alt="Image 6"></div>
+            <div class="item"><img src="24052011 067.JPG" alt="Image 7"></div>
+            <div class="item"><img src="24052011 068.JPG" alt="Image 8"></div>
+            <div class="item"><img src="24052011 073.JPG" alt="Image 9"></div>
+            <div class="item"><img src="24052011 088.JPG" alt="Image 10"></div>
+            <div class="item"><img src="bathroom downstairs.JPG" alt="Bathroom"></div>
+            <div class="item"><img src="living room picture.JPG" alt="Living Room"></div>
+            <div class="item"><img src="pergia door.jpeg" alt="Pergia Door"></div>
+        </div>
+
+        <div class="overlay">
+            <div class="overlay-inner">
+                <img class="overlay-image" src="">
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+                <a class="close">&times;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript for full-screen image viewer -->
+    <script>
+        const overlay = document.querySelector('.overlay');
+        const overlayImage = document.querySelector('.overlay-image');
+        const items = document.querySelectorAll('.item img');
+        const closeBtn = document.querySelector('.close');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+
+        let currentIndex = 0;
+
+        items.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                overlay.style.display = 'flex';
+                overlayImage.src = img.src;
+                currentIndex = index;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            overlayImage.src = items[currentIndex].src;
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            overlayImage.src = items[currentIndex].src;
+        });
+    </script>
+
+</body>
+</html>
+
 </style>
