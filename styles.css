@@ -1,6 +1,7 @@
-ody{background-color:#2B2B2B;
+body{background-color:#2B2B2B;
 margin:auto;
-text-align:center;}
+text-align:center;
+font-family:"Montserrat", "Ubuntu", Helvetica, Arial, sans-serif;}
 
 h1 {font-family:"Montserrat"}
 
@@ -74,7 +75,7 @@ color:#CCC; }
         padding:3px;
     font-size: 3.5rem;
     font-weight:600;
-    border-radius:solid 10px;
+    border-radius:10px;
     text-align:center;
     font-family:"Montserrat";
     float:left;
@@ -83,11 +84,12 @@ color:#CCC; }
 
  .villa{
   margin-top:40px;
+    margin-left: auto;
     margin-right: auto;
-    border:20px solid ;
+    border:20px solid;
     border-radius:10px;
     padding: 10px;
-    float:center;
+    display: block;
  }
 
  /* Media Query for devices with a max width of 1000px (such as tablets) */
@@ -287,7 +289,7 @@ nav ul li a::after{
 }
 
 .overlay{
-	background-color: rgba(0, 0, 0, 0.5s);
+	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	right: 0;
 	left: 0;
@@ -346,7 +348,7 @@ nav ul li a:hover::after{
 		font-size: 3rem;
 	}
   
-  .overlay menu-open,
+  .overlay.menu-open,
   nav.menu-open{
 	  display: flex;
 	  transform: scale(1);
@@ -385,10 +387,6 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
-}
-
- {
-  box-sizing:border-box;
 }
 
 .responsive {
@@ -434,10 +432,6 @@ div.desc {
 
 /* flip image  */
 
-
-body {
-  font-family:"Montserrat";
-}
 
 .Whattodo{color:#Ccc;}
 
@@ -517,20 +511,10 @@ img{border-radius:12px;}
 
 .container-flip{display:flex;}
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
 section {
   width: 100%;
-  height: 100vh;
   box-sizing: border-box;
-  padding: 140px 0; 
-  
+  padding: 140px 0;
 }
 
 .card {
@@ -634,12 +618,6 @@ section {
 /* Pictures.html page  */
 
 
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
 
 .gallery {
   display: grid;
