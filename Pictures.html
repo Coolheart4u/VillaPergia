@@ -1,196 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9VL5H3MKV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-Y9VL5H3MKV');
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Villa Pergia Gallery</title>
+  <title>Photo Gallery: Villa Pergia, Latchi Cyprus</title>
+  <meta name="description" content="Photographs of Villa Pergia in Latchi, Cyprus: the private pool, terrace, three bedrooms, open plan kitchen and the sea views from every balcony.">
 
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">    
-    <script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
+  <link rel="canonical" href="https://villapergia.com/Pictures.html">
 
-    <!-- Inline CSS for simplicity -->
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #fff3e0;
-        }
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/terrace-dining-pool-sea.jpg">
 
-        .gallery {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Villa Pergia">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://villapergia.com/Pictures.html">
+  <meta property="og:title" content="Photo Gallery: Villa Pergia, Latchi Cyprus">
+  <meta property="og:description" content="Photographs of Villa Pergia in Latchi, Cyprus: the private pool, terrace, three bedrooms, open plan kitchen and the sea views from every balcony.">
+  <meta property="og:image" content="https://villapergia.com/assets/images/terrace-dining-pool-sea.jpg">
+  <meta property="og:image:alt" content="Villa Pergia, a private beach villa in Latchi, Cyprus">
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Photo Gallery: Villa Pergia, Latchi Cyprus">
+  <meta name="twitter:description" content="Photographs of Villa Pergia in Latchi, Cyprus: the private pool, terrace, three bedrooms, open plan kitchen and the sea views from every balcony.">
+  <meta name="twitter:image" content="https://villapergia.com/assets/images/terrace-dining-pool-sea.jpg">
 
-        .item {
-            position: relative;
-            width: 100%;
-            padding-top: 75%; /* 4:3 Aspect Ratio */
-            overflow: hidden;
-            border-radius: 10px;
-        }
 
-        .item img {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9VL5H3MKV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y9VL5H3MKV');
+  </script>
 
-        .item img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .overlay-inner {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        .overlay-image {
-            width: 100%;
-            max-height: 80vh;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        .prev, .next, .close {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-size: 2rem;
-            background-color: rgba(0,0,0,0.5);
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            user-select: none;
-        }
-
-        .prev { left: -60px; }
-        .next { right: -60px; }
-        .close {
-            top: -50px;
-            right: 0;
-            font-size: 2.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .prev, .next {
-                display: none;
-            }
-
-            .close {
-                top: 10px;
-                right: 20px;
-            }
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-    <div class="gallery">
-        <div class="grid">
-            <div class="item"><img src="best pic.jpeg" alt="Best Picture"></div>
-            <div class="item"><img src="9 meters pool 3.JPG" alt="Pool"></div>
-            <div class="item"><img src="room upstairs views 2.JPG" alt="Room View"></div>
-            <div class="item"><img src="24052011 026.JPG" alt="Image 1"></div>
-            <div class="item"><img src="24052011 032.JPG" alt="Image 2"></div>
-            <div class="item"><img src="24052011 041.JPG" alt="Image 3"></div>
-            <div class="item"><img src="24052011 057.JPG" alt="Image 4"></div>
-            <div class="item"><img src="24052011 059.JPG" alt="Image 5"></div>
-            <div class="item"><img src="24052011 065.JPG" alt="Image 6"></div>
-            <div class="item"><img src="24052011 067.JPG" alt="Image 7"></div>
-            <div class="item"><img src="24052011 068.JPG" alt="Image 8"></div>
-            <div class="item"><img src="24052011 073.JPG" alt="Image 9"></div>
-            <div class="item"><img src="24052011 088.JPG" alt="Image 10"></div>
-            <div class="item"><img src="bathroom downstairs.JPG" alt="Bathroom"></div>
-            <div class="item"><img src="living room picture.JPG" alt="Living Room"></div>
-            <div class="item"><img src="pergia door.jpeg" alt="Pergia Door"></div>
-        </div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-        <div class="overlay">
-            <div class="overlay-inner">
-                <img class="overlay-image" src="">
-                <a class="prev">&#10094;</a>
-                <a class="next">&#10095;</a>
-                <a class="close">&times;</a>
-            </div>
-        </div>
+<header class="site-header is-stuck">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html">Villa Pergia</a>
+
+    <button class="nav-toggle" id="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="Pictures.html" aria-current="page">Gallery</a></li>
+        <li><a class="nav__link" href="Amenities.html">Amenities</a></li>
+        <li><a class="nav__link" href="Visits.html">The area</a></li>
+        <li><a class="nav__link" href="Contact.html">Contact</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="Contact.html">Check availability</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="nav-scrim" hidden></div>
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Gallery</p>
+        <h1>Villa Pergia in photographs</h1>
+        <p class="lede">Select any photograph to open it full size. Use the arrows, the arrow keys, or swipe to move between them.</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/pool-garden.jpg" alt="The private swimming pool edged with flagstones, roses and an orange tree" width="3072" height="2304" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/terrace-dining-pool-sea.jpg" alt="A table set for dinner under the pergola, with the pool and the sea beyond" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/pool-terrace.jpg" alt="The pool seen from the water's edge, with sun loungers and the shaded dining terrace behind" width="1125" height="831" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/villa-featured.jpg" alt="Villa Pergia seen from the garden" width="1200" height="900" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/kitchen-breakfast-bar.jpg" alt="Open plan kitchen with a granite breakfast bar, bar stools and a dining table set for six" width="3072" height="2304" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/open-plan-kitchen-dining.jpg" alt="The kitchen and dining area, with tall windows looking out to the garden" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/dining-table-sea-view.jpg" alt="A bowl of oranges and lemons on the dining table, framed by two narrow windows onto the sea" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/living-room.jpg" alt="The living room with two sofas, a low table and a window onto the orange tree" width="3072" height="2304" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/dining-area-from-landing.jpg" alt="The dining area seen from the landing above" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/bedroom-double.jpg" alt="Double bedroom with a wooden bed frame and bedside tables" width="3072" height="2304" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/bedroom-double-balcony.jpg" alt="Double bedroom with a dressing table, mirror and a door onto the balcony" width="3072" height="2304" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/bedroom-twin.jpg" alt="Twin bedroom with two single beds either side of a window" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/bedroom-upstairs-view.jpg" alt="An upstairs bedroom looking out towards the sea" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/bathroom-ensuite.jpg" alt="One of the two en suite bathrooms on the upper floor" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/bathroom-downstairs.jpg" alt="The bathroom serving the ground floor bedroom" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/marble-staircase.jpg" alt="The marble staircase leading to the first floor" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/entrance-hall.jpg" alt="The entrance hall inside the front door" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/villa-entrance.jpg" alt="The approach to the villa's front entrance" width="2304" height="3072" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/villa-front-door.jpg" alt="The front door of Villa Pergia" width="612" height="900" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/balcony-sea-view.jpg" alt="The view along the coast from one of the upstairs balconies" width="3072" height="2304" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/sea-view-from-terrace.jpg" alt="The Mediterranean seen over pine and olive trees from the terrace" width="3072" height="2304" loading="lazy" decoding="async">
+        </button>
+
+        <button class="gallery-item" type="button" aria-label="Open photograph">
+          <img src="assets/images/sea-view-from-bedroom.jpg" alt="View from a bedroom window across scrubland to the sea and offshore rocks" width="3072" height="2304" loading="lazy" decoding="async">
+        </button>
+
+      </div>
     </div>
+  </section>
+</main>
 
-    <!-- Optional JavaScript for full-screen image viewer -->
-    <script>
-        const overlay = document.querySelector('.overlay');
-        const overlayImage = document.querySelector('.overlay-image');
-        const items = document.querySelectorAll('.item img');
-        const closeBtn = document.querySelector('.close');
-        const nextBtn = document.querySelector('.next');
-        const prevBtn = document.querySelector('.prev');
+<dialog class="lightbox" id="lightbox" aria-label="Photograph viewer">
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" src="" alt="">
+    <figcaption class="lightbox__caption"></figcaption>
+  </figure>
+  <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous photograph">
+    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+  </button>
+  <button class="lightbox__btn lightbox__next" type="button" aria-label="Next photograph">
+    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+  </button>
+  <button class="lightbox__btn lightbox__close" type="button" aria-label="Close viewer">
+    <i class="fas fa-times" aria-hidden="true"></i>
+  </button>
+</dialog>
 
-        let currentIndex = 0;
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Villa Pergia</h3>
+        <p>Petrou Christou 9<br>Neo Chorio, Latchi<br>Paphos, Cyprus</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <div class="footer-links">
+          <a href="Pictures.html">Gallery</a>
+          <a href="Amenities.html">Amenities and house rules</a>
+          <a href="Visits.html">Things to do nearby</a>
+          <a href="Contact.html">Contact and booking</a>
+        </div>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <div class="footer-links">
+          <a href="mailto:contact@villapergia.com">contact@villapergia.com</a>
+        </div>
+        <div class="footer-social" style="margin-top:16px">
+          <a href="mailto:contact@villapergia.com" aria-label="Email Villa Pergia">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Villa Pergia 2026</p>
+      <p>Managed by a private host</p>
+    </div>
+  </div>
+</footer>
 
-        items.forEach((img, index) => {
-            img.addEventListener('click', () => {
-                overlay.style.display = 'flex';
-                overlayImage.src = img.src;
-                currentIndex = index;
-            });
-        });
-
-        closeBtn.addEventListener('click', () => {
-            overlay.style.display = 'none';
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % items.length;
-            overlayImage.src = items[currentIndex].src;
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            overlayImage.src = items[currentIndex].src;
-        });
-    </script>
-
+<script src="assets/js/script.js" defer></script>
 </body>
 </html>
-
-</style>
