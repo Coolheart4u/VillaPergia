@@ -1,0 +1,290 @@
+{
+  "anassa-hotel-beach.jpg": {
+    "width": 1024,
+    "height": 600,
+    "widths": [
+      640,
+      1024
+    ]
+  },
+  "balcony-sea-view.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "bathroom-downstairs.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "bathroom-ensuite.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "bedroom-double-balcony.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "bedroom-double.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "bedroom-twin.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "bedroom-upstairs-view.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "blue-lagoon-akamas.jpg": {
+    "width": 1024,
+    "height": 682,
+    "widths": [
+      640,
+      1024
+    ]
+  },
+  "clear-blue-sea.jpg": {
+    "width": 564,
+    "height": 423,
+    "widths": [
+      564
+    ]
+  },
+  "cyprus-fish-meze.jpg": {
+    "width": 271,
+    "height": 186,
+    "widths": [
+      271
+    ]
+  },
+  "dining-area-from-landing.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "dining-table-sea-view.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "entrance-hall.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "kitchen-breakfast-bar.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "kitchen-table.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "kykkos-monastery.jpg": {
+    "width": 259,
+    "height": 194,
+    "widths": [
+      259
+    ]
+  },
+  "latchi-beach.jpg": {
+    "width": 1125,
+    "height": 636,
+    "widths": [
+      640,
+      1125
+    ]
+  },
+  "latchi-overview.jpg": {
+    "width": 1200,
+    "height": 900,
+    "widths": [
+      640,
+      1200
+    ]
+  },
+  "living-room.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "local-fruit.jpg": {
+    "width": 1200,
+    "height": 900,
+    "widths": [
+      640,
+      1200
+    ]
+  },
+  "marble-staircase-detail.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "marble-staircase.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "open-plan-kitchen-dining.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "paphos-mosaics.jpg": {
+    "width": 290,
+    "height": 174,
+    "widths": [
+      290
+    ]
+  },
+  "path-to-beach.jpg": {
+    "width": 1200,
+    "height": 900,
+    "widths": [
+      640,
+      1200
+    ]
+  },
+  "pool-garden.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "pool-terrace.jpg": {
+    "width": 1125,
+    "height": 831,
+    "widths": [
+      640,
+      1125
+    ]
+  },
+  "sea-view-from-bedroom.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "sea-view-from-terrace.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "terrace-dining-pool-sea.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "villa-entrance.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "widths": [
+      640,
+      1280,
+      1920
+    ]
+  },
+  "villa-featured.jpg": {
+    "width": 1200,
+    "height": 900,
+    "widths": [
+      640,
+      1200
+    ]
+  },
+  "villa-front-door.jpg": {
+    "width": 612,
+    "height": 900,
+    "widths": [
+      612
+    ]
+  }
+}
