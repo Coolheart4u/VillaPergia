@@ -36,7 +36,7 @@
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header is-stuck">
+<header class="site-header">
   <div class="container site-header__inner">
     <a class="brand" href="index.html">Villa Pergia</a>
 
@@ -71,7 +71,7 @@
         </p>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:start">
+      <div class="contact-layout">
 
         <form id="enquiry" class="form-card" action="https://formsubmit.co/contact@villapergia.com" method="POST">
           <input type="hidden" name="_subject" value="Villa Pergia availability enquiry">
@@ -95,11 +95,11 @@
           </div>
 
           <div class="field">
-            <label for="phone">Phone <span style="font-weight:400;color:var(--ink-500)">(optional)</span></label>
+            <label for="phone">Phone <span class="optional">(optional)</span></label>
             <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel">
           </div>
 
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="field-row">
             <div class="field">
               <label for="arrival">Arrival</label>
               <input type="date" id="arrival" name="arrival">
@@ -120,30 +120,30 @@
             <textarea id="message" name="message" rows="5"></textarea>
           </div>
 
-          <button class="btn btn--primary" type="submit" style="width:100%">Send enquiry</button>
+          <button class="btn btn--primary btn--block" type="submit">Send enquiry</button>
 
-          <p style="margin-top:16px;font-size:.85rem;color:var(--ink-500)">
+          <p class="form-note">
             We use what you send here only to answer your enquiry. We do not pass it to anyone else
             and we do not add you to a mailing list. See the <a href="privacy.html">privacy policy</a>.
           </p>
         </form>
 
-        <div>
-          <h2 style="font-size:1.6rem;margin-bottom:16px">Or reach us directly</h2>
+        <div class="contact-aside">
+          <h2>Or reach us directly</h2>
 
-          <div class="footer-links" style="gap:12px;margin-bottom:32px">
-            <p style="display:flex;gap:10px;align-items:baseline">
-              <i class="fa fa-envelope" aria-hidden="true" style="color:var(--sea-600)"></i>
+          <div class="footer-links">
+            <p class="contact-line">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
               <a href="mailto:contact@villapergia.com">contact@villapergia.com</a>
             </p>
-            <p style="display:flex;gap:10px;align-items:baseline">
-              <i class="fa fa-map-marker-alt" aria-hidden="true" style="color:var(--sea-600)"></i>
+            <p class="contact-line">
+              <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
               <span>Petrou Christou 9<br>Neo Chorio, Latchi<br>Paphos, Cyprus</span>
             </p>
           </div>
 
-          <h3 style="margin-bottom:12px">Good to know</h3>
-          <ul style="display:flex;flex-direction:column;gap:10px;color:var(--ink-500);font-size:.95rem">
+          <h3>Good to know</h3>
+          <ul class="contact-notes">
             <li>Check in 2:00pm to 8:00pm, check out 8:00am to 11:00am.</li>
             <li>The villa sleeps up to seven across three bedrooms.</li>
             <li>Around an hour from Paphos airport, two from Larnaca.</li>
@@ -177,7 +177,7 @@
         <div class="footer-links">
           <a href="mailto:contact@villapergia.com">contact@villapergia.com</a>
         </div>
-        <div class="footer-social" style="margin-top:16px">
+        <div class="footer-social social-spaced">
           <a href="mailto:contact@villapergia.com" aria-label="Email Villa Pergia">
             <i class="fa fa-envelope" aria-hidden="true"></i>
           </a>

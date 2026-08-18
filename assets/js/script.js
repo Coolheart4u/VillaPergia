@@ -132,7 +132,10 @@
 // Sticky header
 // --------------------------------------------------------------------------
 (function initStickyHeader() {
-  const header = document.querySelector('.site-header');
+  // Only the overlay header changes appearance on scroll. Every other page has
+  // a solid header from the start, and toggling this class there would strip
+  // the solid background and leave white type on a cream ground.
+  const header = document.querySelector('.site-header--overlay');
   if (!header || !('IntersectionObserver' in window)) return;
 
   const sentinel = document.createElement('div');
