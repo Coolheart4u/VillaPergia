@@ -3,6 +3,81 @@
 // this file on the page where the element is missing.
 
 // --------------------------------------------------------------------------
+// Analytics consent
+//
+// Cyprus is in the EU, so GDPR and the ePrivacy Directive apply: no cookie may
+// be set before the visitor agrees. Google Analytics is therefore not in the
+// page markup at all. Nothing loads and nothing is written until consent is
+// explicitly granted, and ignoring the banner counts as refusal.
+// --------------------------------------------------------------------------
+(function initConsent() {
+  const KEY = 'vp-analytics-consent';
+  const GA_ID = 'G-Y9VL5H3MKV';
+
+  function readChoice() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+
+  function saveChoice(value) {
+    try { localStorage.setItem(KEY, value); } catch (e) { /* private mode */ }
+  }
+
+  function loadAnalytics() {
+    if (window.__vpAnalyticsLoaded) return;
+    window.__vpAnalyticsLoaded = true;
+
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(tag);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
+  }
+
+  function showBanner() {
+    const bar = document.createElement('div');
+    bar.className = 'consent';
+    bar.setAttribute('role', 'dialog');
+    bar.setAttribute('aria-label', 'Analytics consent');
+    bar.innerHTML =
+      '<p class="consent__text">We would like to count visits so we know which pages are useful. ' +
+      'No cookies are set unless you agree. ' +
+      '<a href="privacy.html">Privacy policy</a>.</p>' +
+      '<div class="consent__actions">' +
+      '<button class="btn btn--outline consent__no" type="button">Decline</button>' +
+      '<button class="btn btn--primary consent__yes" type="button">Accept</button>' +
+      '</div>';
+    document.body.appendChild(bar);
+
+    bar.querySelector('.consent__yes').addEventListener('click', function () {
+      saveChoice('granted');
+      loadAnalytics();
+      bar.remove();
+    });
+    bar.querySelector('.consent__no').addEventListener('click', function () {
+      saveChoice('denied');
+      bar.remove();
+    });
+  }
+
+  // Lets the privacy page hand the choice back to the visitor.
+  const reset = document.getElementById('reset-consent');
+  if (reset) {
+    reset.addEventListener('click', function () {
+      try { localStorage.removeItem(KEY); } catch (e) { /* ignore */ }
+      if (!document.querySelector('.consent')) showBanner();
+    });
+  }
+
+  const choice = readChoice();
+  if (choice === 'granted') loadAnalytics();
+  else if (choice !== 'denied') showBanner();
+})();
+
+// --------------------------------------------------------------------------
 // Mobile navigation
 // --------------------------------------------------------------------------
 (function initNav() {

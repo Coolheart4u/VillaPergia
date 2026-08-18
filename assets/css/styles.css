@@ -760,7 +760,61 @@ p { max-width: var(--measure); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* --------------------------------------------------------------------------
-   Breakpoints: 1024, 768, 480. Nothing else.
+   Consent banner
+   -------------------------------------------------------------------------- */
+
+.consent {
+  position: fixed;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 150;
+  max-width: 46rem;
+  margin-inline: auto;
+  background: var(--white);
+  border: 1px solid var(--sand-200);
+  border-radius: var(--radius-m);
+  box-shadow: var(--lift);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-5);
+}
+
+.consent__text {
+  flex: 1 1 20rem;
+  font-size: .9rem;
+  color: var(--ink-700);
+  max-width: none;
+}
+
+.consent__actions { display: flex; gap: var(--space-2); flex: 0 0 auto; }
+.consent__actions .btn { min-height: 44px; padding-inline: var(--space-4); }
+
+/* --------------------------------------------------------------------------
+   Long form policy text
+   -------------------------------------------------------------------------- */
+
+.prose-block { max-width: var(--measure); display: flex; flex-direction: column; gap: var(--space-3); }
+.prose-block h2 { font-size: 1.5rem; margin-top: var(--space-5); }
+.prose-block p { color: var(--ink-700); }
+.policy-list { display: flex; flex-direction: column; gap: var(--space-2); color: var(--ink-700); }
+.policy-list li { padding-left: var(--space-4); position: relative; }
+.policy-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sea-600);
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoints: 1024, 900, 768, 480. Nothing else.
    -------------------------------------------------------------------------- */
 
 @media (max-width: 1024px) {
