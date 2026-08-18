@@ -182,20 +182,26 @@ p { max-width: var(--measure); }
    Header and navigation
    -------------------------------------------------------------------------- */
 
+/* Solid is the default. Transparency is opt-in via .site-header--overlay, and
+   only on a page whose header sits over a photograph. Defaulting the other way
+   round meant that if anything removed .is-stuck, every page rendered white
+   type on a cream ground. */
+/* Deliberately no backdrop-filter. It creates a containing block for
+   fixed-position descendants, which re-anchors the off-canvas nav panel to the
+   header instead of the viewport and makes the closed panel widen the page.
+   The ground is opaque anyway, so the blur bought nothing. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: transparent;
+  background: var(--sand-50);
+  border-bottom: 1px solid var(--sand-200);
   transition: background-color var(--ease), border-color var(--ease), box-shadow var(--ease);
-  border-bottom: 1px solid transparent;
 }
 
-/* Solid once the page scrolls, so type stays legible over content */
-.site-header.is-stuck {
-  background: rgba(251, 248, 243, .94);
-  backdrop-filter: blur(8px);
-  border-bottom-color: var(--sand-200);
+.site-header--overlay:not(.is-stuck) {
+  background: transparent;
+  border-bottom-color: transparent;
 }
 
 .site-header__inner {
@@ -211,11 +217,10 @@ p { max-width: var(--measure); }
   font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: -.01em;
-  color: var(--white);
+  color: var(--ink-900);
   white-space: nowrap;
 }
 .brand:hover { text-decoration: none; }
-.site-header.is-stuck .brand { color: var(--ink-900); }
 
 .nav-toggle {
   display: none;
@@ -227,9 +232,12 @@ p { max-width: var(--measure); }
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: var(--white);
+  color: var(--ink-900);
 }
-.site-header.is-stuck .nav-toggle { color: var(--ink-900); }
+
+/* Over the hero photograph only */
+.site-header--overlay:not(.is-stuck) .brand,
+.site-header--overlay:not(.is-stuck) .nav-toggle { color: var(--white); }
 
 .nav__list {
   display: flex;
@@ -239,13 +247,15 @@ p { max-width: var(--measure); }
 
 .nav__link {
   position: relative;
-  color: var(--white);
+  color: var(--ink-700);
   font-size: .95rem;
   font-weight: 500;
   padding-block: var(--space-3);
+}
+.site-header--overlay:not(.is-stuck) .nav__link {
+  color: var(--white);
   text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
 }
-.site-header.is-stuck .nav__link { color: var(--ink-700); text-shadow: none; }
 .nav__link:hover { text-decoration: none; }
 
 .nav__link::after {
@@ -476,6 +486,9 @@ p { max-width: var(--measure); }
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
+  /* Without a cap this is over 700px tall on a wide screen, which is more map
+     than anyone needs and pushes the footer a long way down. */
+  max-height: 480px;
   border-radius: var(--radius-m);
   overflow: hidden;
   border: 1px solid var(--sand-200);
@@ -543,7 +556,9 @@ p { max-width: var(--measure); }
 
 .area-card {
   position: relative;
-  aspect-ratio: 1;
+  /* 4:3 rather than square. Most of these are 4:3 landscape originals, so a
+     square crop threw away a third of the frame, usually the sea. */
+  aspect-ratio: 4 / 3;
   border: 0;
   padding: 0;
   background: none;
@@ -560,6 +575,9 @@ p { max-width: var(--measure); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* These are coastal shots with a low horizon. Centring the crop lands on
+     empty sky, so bias it downwards. */
+  object-position: center 60%;
   transition: transform 400ms ease-out;
 }
 .area-card:hover img { transform: scale(1.05); }
@@ -740,8 +758,39 @@ p { max-width: var(--measure); }
   max-width: 34rem;
 }
 
-.field { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-4); }
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  /* Grid and flex items default to min-width:auto, so they refuse to shrink
+     below their min-content width. input[type=date] has a wide one. */
+  min-width: 0;
+}
 .field label { font-weight: 600; font-size: .9rem; }
+.field .optional { font-weight: 400; color: var(--ink-500); }
+
+/* Two fields side by side, stacking before they can overflow */
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.contact-aside h2 { font-size: 1.6rem; margin-bottom: var(--space-4); }
+.contact-aside .footer-links { gap: var(--space-3); margin-bottom: var(--space-6); }
+.contact-line { display: flex; gap: var(--space-3); align-items: baseline; }
+.contact-line i { color: var(--sea-600); }
+.contact-notes { display: flex; flex-direction: column; gap: var(--space-3); color: var(--ink-500); font-size: .95rem; }
+.form-note { margin-top: var(--space-4); font-size: .85rem; color: var(--ink-500); }
+.muted { color: var(--ink-500); }
+.btn--block { width: 100%; }
+.stack-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.social-spaced { margin-top: var(--space-4); }
+.amenity-note { margin-top: var(--space-3); font-size: .9rem; color: var(--ink-500); }
 
 .field input, .field textarea {
   width: 100%;
@@ -841,7 +890,10 @@ p { max-width: var(--measure); }
 
   .nav__list { flex-direction: column; align-items: stretch; gap: 0; }
 
-  .nav__link {
+  /* The panel is cream even on the overlay page, so its links must be dark.
+     Listed twice so this beats .site-header--overlay:not(.is-stuck) .nav__link. */
+  .nav__link,
+  .site-header--overlay:not(.is-stuck) .nav__link {
     color: var(--ink-900);
     text-shadow: none;
     font-size: 1.05rem;
@@ -880,6 +932,8 @@ p { max-width: var(--measure); }
   .container { padding-inline: var(--space-4); }
   .form-card { padding: var(--space-5); }
   .price-card { padding: var(--space-5) var(--space-4); }
+  /* Two date inputs will not fit side by side at this width */
+  .field-row { grid-template-columns: 1fr; gap: 0; }
 }
 
 /* --------------------------------------------------------------------------
