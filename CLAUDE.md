@@ -25,14 +25,19 @@ Amenities.html      Amenities and house rules
 Visits.html         The area
 Contact.html        Enquiry form
 thank-you.html      Form confirmation, noindex
+privacy.html        Privacy policy
 sitemap.xml
 robots.txt
 CNAME
+tools/
+  build-images.js         regenerates AVIF and WebP derivatives
+  apply-picture-markup.py rewrites img tags from the manifest
+  image-manifest.json
 assets/
   css/styles.css
   js/script.js
   favicon.svg
-  images/           lowercase descriptive slugs
+  images/           .jpg fallback plus -640/-1280/-1920 .avif and .webp
   images/unsorted/  unidentified, needs review before use
 ```
 
@@ -113,19 +118,41 @@ Structural requirements:
 
 ## Images
 
-Still the biggest performance problem on this site. The files in `assets/images/` are
-camera originals at 1.5 to 1.9MB each. Lazy loading and declared dimensions are in place,
-but resizing has not happened and needs a build step.
+Every photograph has AVIF and WebP variants at 640, 1280 and 1920, plus one at its own
+width where the source falls between those breakpoints. The `.jpg` is the fallback,
+resized to 1600px at quality 82. Markup is `<picture>` with `sizes` scoped to how wide the
+image actually renders in that context.
 
-- Never commit a camera original from here on. Keep those in cloud storage or a local
-  archive outside the repository. Git stores binaries badly and every re-export adds its
-  full size to history permanently.
-- Resize before committing. Nothing needs to be wider than 2000px, and gallery thumbnails
-  should be around 800px.
+### Adding a photograph
+
+1. Drop the original into `assets/images/` with a lowercase, hyphenated, descriptive name.
+2. Install sharp somewhere outside the repo and run the generator:
+   ```
+   mkdir -p /tmp/imgtool && cd /tmp/imgtool && npm init -y && npm install sharp
+   node ~/repos/VillaPergia/tools/build-images.js
+   ```
+3. Run `python3 tools/apply-picture-markup.py` to rewrite the markup and refresh every
+   `width`, `height` and `srcset` from `tools/image-manifest.json`.
+4. Check `git status`. Only the files you expect should have changed.
+
+**`build-images.js` rewrites the JPEGs in place.** The files in `assets/images/` are
+already compressed derivatives, so running it a second time re-encodes its own output and
+compounds the quality loss. Run it against fresh originals only.
+
+Neither script is wired to a `package.json`. The site has no build step and adding one is
+a decision for the Astro migration.
+
+### Rules
+
+- Never commit a camera original. Keep those in cloud storage or a local archive outside
+  the repository. Git stores binaries badly and every re-export adds its full size to
+  history permanently.
 - Always set `width` and `height`, read from the actual file rather than guessed. Wrong
   values cause exactly the layout shift the attributes exist to prevent.
 - Always set `loading="lazy"` and `decoding="async"` below the fold. Never on the hero,
   which is `loading="eager"` with `fetchpriority="high"`.
+- Keep `sizes` honest. It must describe the rendered width, or the browser picks a variant
+  that is too large and the whole exercise is wasted.
 - Self host everything. Do not hotlink third party CDNs.
 
 ## CSS
@@ -155,15 +182,19 @@ Each feature lives in its own IIFE that returns early when its elements are not 
 
 ## Analytics and privacy
 
-Cyprus is in the EU, so GDPR and the ePrivacy Directive apply. Google Analytics
-(`G-Y9VL5H3MKV`) sets cookies before consent, which is not compliant without a banner.
+Cyprus is in the EU, so GDPR and the ePrivacy Directive apply: no cookie may be set before
+the visitor agrees.
 
-The planned fix is to switch to cookieless analytics (Plausible or Umami) rather than add
-a consent banner, because cookieless analytics stores nothing on the visitor's device and
-needs no banner at all. **This is still outstanding.**
+Google Analytics is therefore **not in the page markup**. Do not put a `gtag` snippet back
+into any HTML file. `initConsent` in `assets/js/script.js` injects it only after an
+explicit accept. Declining, or ignoring the banner, means Google is never contacted.
 
-The site also still needs a privacy policy. The enquiry form collects names, email
-addresses, phone numbers and travel dates and posts them to `formsubmit.co`.
+`privacy.html` documents what the enquiry form collects, the third parties involved,
+retention and GDPR rights. Update it whenever a new third party script or form field is
+added, and keep the "last updated" date current.
+
+Moving to a cookieless provider such as Plausible or Umami would remove the banner
+altogether and is still worth doing. It needs an account, so it is not done.
 
 ## Content accuracy
 
