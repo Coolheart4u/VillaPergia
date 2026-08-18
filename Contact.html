@@ -1,127 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9VL5H3MKV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-Y9VL5H3MKV');
-    </script>
-    <title>Villa Pergia Contact</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">    
+  <title>Check Availability and Book: Villa Pergia, Latchi Cyprus</title>
+  <meta name="description" content="Send your dates and we will confirm availability at Villa Pergia in Latchi, Cyprus. Book direct with the owners, no agency fees.">
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9VL5H3MKV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y9VL5H3MKV');
+  </script>
 
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-
-        h1 {
-            text-align: center;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-
-        .address, .email {
-            text-align: center;
-            font-family: 'Ubuntu', sans-serif;
-            margin-bottom: 20px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            resize: vertical;
-        }
-
-        input[type="submit"] {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 12px;
-            margin-top: 20px;
-            font-size: 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                margin: 20px;
-                padding: 20px;
-            }
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header is-stuck">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html">Villa Pergia</a>
+
+    <button class="nav-toggle" id="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="Pictures.html">Gallery</a></li>
+        <li><a class="nav__link" href="Amenities.html">Amenities</a></li>
+        <li><a class="nav__link" href="Visits.html">The area</a></li>
+        <li><a class="nav__link" href="Contact.html" aria-current="page">Contact</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="#enquiry">Check availability</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="nav-scrim" hidden></div>
+
+<main id="main">
+  <section class="section">
     <div class="container">
-        <h1>Villa Pergia</h1>
-        <div class="address">
-            <p>Petrou Christou 9</p>
-            <p>Neo Chorio</p>
-            <p>Paphos, Cyprus</p>
-        </div>
-        <div class="email">
-            <p><i class="fas fa-envelope"></i> contact@villapergia.com</p>
-        </div>
-        <hr>
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h1>Check availability</h1>
+        <p class="lede">
+          Send us your dates and we will come back to you with availability and a total. You are
+          booking direct with the owners, so there are no agency fees.
+        </p>
+      </div>
 
-        <form action="https://formsubmit.co/contact@villapergia.com" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:start">
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+        <form id="enquiry" class="form-card" action="https://formsubmit.co/contact@villapergia.com" method="POST">
+          <input type="hidden" name="_subject" value="Villa Pergia availability enquiry">
+          <input type="hidden" name="_next" value="https://villapergia.com/thank-you.html">
+          <input type="hidden" name="_template" value="table">
 
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+          <!-- Honeypot. People never see this, bots fill everything they find. -->
+          <div class="hp" aria-hidden="true">
+            <label for="_honey">Leave this field empty</label>
+            <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off">
+          </div>
 
-            <input type="submit" value="Send Message">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone <span style="font-weight:400;color:var(--ink-500)">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel">
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div class="field">
+              <label for="arrival">Arrival</label>
+              <input type="date" id="arrival" name="arrival">
+            </div>
+            <div class="field">
+              <label for="departure">Departure</label>
+              <input type="date" id="departure" name="departure">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="guests">Number of guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="7" inputmode="numeric">
+          </div>
+
+          <div class="field">
+            <label for="message">Anything else we should know</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+
+          <button class="btn btn--primary" type="submit" style="width:100%">Send enquiry</button>
+
+          <p style="margin-top:16px;font-size:.85rem;color:var(--ink-500)">
+            We use what you send here only to answer your enquiry. We do not pass it to anyone else
+            and we do not add you to a mailing list.
+          </p>
         </form>
-    </div>
 
+        <div>
+          <h2 style="font-size:1.6rem;margin-bottom:16px">Or reach us directly</h2>
+
+          <div class="footer-links" style="gap:12px;margin-bottom:32px">
+            <p style="display:flex;gap:10px;align-items:baseline">
+              <i class="fa fa-envelope" aria-hidden="true" style="color:var(--sea-600)"></i>
+              <a href="mailto:contact@villapergia.com">contact@villapergia.com</a>
+            </p>
+            <p style="display:flex;gap:10px;align-items:baseline">
+              <i class="fa fa-map-marker-alt" aria-hidden="true" style="color:var(--sea-600)"></i>
+              <span>Petrou Christou 9<br>Neo Chorio, Latchi<br>Paphos, Cyprus</span>
+            </p>
+          </div>
+
+          <h3 style="margin-bottom:12px">Good to know</h3>
+          <ul style="display:flex;flex-direction:column;gap:10px;color:var(--ink-500);font-size:.95rem">
+            <li>Check in 2:00pm to 8:00pm, check out 8:00am to 11:00am.</li>
+            <li>The villa sleeps up to seven across three bedrooms.</li>
+            <li>Around an hour from Paphos airport, two from Larnaca.</li>
+            <li>We speak English, Greek, French, German and Russian.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Villa Pergia</h3>
+        <p>Petrou Christou 9<br>Neo Chorio, Latchi<br>Paphos, Cyprus</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <div class="footer-links">
+          <a href="Pictures.html">Gallery</a>
+          <a href="Amenities.html">Amenities and house rules</a>
+          <a href="Visits.html">Things to do nearby</a>
+          <a href="Contact.html">Contact and booking</a>
+        </div>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <div class="footer-links">
+          <a href="mailto:contact@villapergia.com">contact@villapergia.com</a>
+        </div>
+        <div class="footer-social" style="margin-top:16px">
+          <a href="mailto:contact@villapergia.com" aria-label="Email Villa Pergia">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Villa Pergia 2026</p>
+      <p>Managed by a private host</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/script.js" defer></script>
 </body>
 </html>
