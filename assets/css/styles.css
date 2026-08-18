@@ -486,6 +486,9 @@ p { max-width: var(--measure); }
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
+  /* Without a cap this is over 700px tall on a wide screen, which is more map
+     than anyone needs and pushes the footer a long way down. */
+  max-height: 480px;
   border-radius: var(--radius-m);
   overflow: hidden;
   border: 1px solid var(--sand-200);
@@ -553,7 +556,9 @@ p { max-width: var(--measure); }
 
 .area-card {
   position: relative;
-  aspect-ratio: 1;
+  /* 4:3 rather than square. Most of these are 4:3 landscape originals, so a
+     square crop threw away a third of the frame, usually the sea. */
+  aspect-ratio: 4 / 3;
   border: 0;
   padding: 0;
   background: none;
@@ -570,6 +575,9 @@ p { max-width: var(--measure); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* These are coastal shots with a low horizon. Centring the crop lands on
+     empty sky, so bias it downwards. */
+  object-position: center 60%;
   transition: transform 400ms ease-out;
 }
 .area-card:hover img { transform: scale(1.05); }

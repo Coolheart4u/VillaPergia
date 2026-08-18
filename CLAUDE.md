@@ -238,7 +238,32 @@ which makes the history useless for finding when something broke.
 
 ## Verification before committing
 
-There is no test suite, so check by hand:
+There is no test suite, but the pages can be rendered and checked automatically.
+Headless Chromium catches the class of bug that reading the markup does not: contrast,
+overflow, and whether the JavaScript actually does what it claims.
+
+```
+# once
+mkdir -p /tmp/shots && cd /tmp/shots && npm init -y && npm install playwright
+npx playwright install chromium
+
+# each time
+cd /path/to/VillaPergia && python3 -m http.server 8123 &
+node /tmp/shots/check.js
+```
+
+A useful check script renders every page at 375, 768 and 1440 and asserts:
+console is clean, no request returns 4xx, `documentElement.scrollWidth` never exceeds
+`clientWidth`, no cookie exists before consent, and the nav toggle is visible below 900px
+and hidden above it.
+
+Three real bugs were found this way and would not have been found any other way:
+
+- the sticky observer stripped `is-stuck`, leaving white header type on cream
+- `input[type=date]` has a min-content width that made two of them overflow at 375px
+- `backdrop-filter` on the header re-anchored the fixed nav panel and widened the page
+
+Then check by hand:
 
 1. Open the changed page and confirm the browser console is clean. A single uncaught
    error stops all remaining JavaScript on the page.
