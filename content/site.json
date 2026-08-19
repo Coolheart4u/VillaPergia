@@ -1,0 +1,15 @@
+{
+  "name": "Villa Pergia",
+  "email": "contact@villapergia.com",
+  "phone": "",
+  "whatsapp": "",
+  "address_line1": "Petrou Christou 9",
+  "address_line2": "Neo Chorio, Latchi",
+  "address_line3": "Paphos, Cyprus",
+  "copyright_year": "2026",
+  "check_in": "2:00pm to 8:00pm",
+  "check_out": "8:00am to 11:00am",
+  "max_guests": 7,
+  "bedrooms": 3,
+  "bathrooms": 3
+}

@@ -1,0 +1,77 @@
+{
+  "intro": "Villa Pergia sits at the western end of Cyprus, where the Akamas peninsula begins and the coast road runs out. The Baths of Aphrodite are a five minute drive, Latchi harbour about the same, Paphos town half an hour, and the cedar forest around Kykkos Monastery forty five minutes inland.",
+  "cards": [
+    {
+      "image": "assets/images/sea-view-from-terrace.jpg",
+      "alt": "The Mediterranean seen over pine and olive trees from the villa terrace",
+      "width": 1600,
+      "height": 1200,
+      "title": "Stunning sea views",
+      "text": "The terrace and both upstairs balconies look north over the treetops to open Mediterranean."
+    },
+    {
+      "image": "assets/images/blue-lagoon-akamas.jpg",
+      "alt": "The turquoise shallows of the Blue Lagoon on the Akamas peninsula",
+      "width": 1024,
+      "height": 682,
+      "title": "The Blue Lagoon",
+      "text": "Boats leave Latchi harbour each morning for the lagoon at the tip of the Akamas peninsula, clear enough to see the bottom from the deck."
+    },
+    {
+      "image": "assets/images/latchi-beach.jpg",
+      "alt": "An empty stretch of sand and shallow clear water at Latchi beach",
+      "width": 1125,
+      "height": 636,
+      "title": "The beach to yourself",
+      "text": "Fifty metres from the door. Outside high season there are mornings when nobody else is on it. Loggerhead turtles nest along this coast."
+    },
+    {
+      "image": "assets/images/anassa-hotel-beach.jpg",
+      "alt": "The coastline shared with the neighbouring Anassa hotel",
+      "width": 1024,
+      "height": 600,
+      "title": "The same beach as the Anassa",
+      "text": "The five star Anassa sits on the same stretch of coast. The beach itself is public."
+    },
+    {
+      "image": "assets/images/sea-view-from-bedroom.jpg",
+      "alt": "View from an upstairs bedroom window across scrubland to the sea and offshore rocks",
+      "width": 1600,
+      "height": 1200,
+      "title": "Towards the Baths of Aphrodite",
+      "text": "The coast road west ends at the grotto where the myth places Aphrodite bathing, five minutes by car. It is also where the Akamas walking trails start."
+    },
+    {
+      "image": "assets/images/path-to-beach.jpg",
+      "alt": "The short path leading from the villa down to the shore",
+      "width": 1200,
+      "height": 900,
+      "title": "Two minutes on foot",
+      "text": "The walk from the villa to the water."
+    },
+    {
+      "image": "assets/images/kykkos-monastery.jpg",
+      "alt": "The painted arcades and courtyard of Kykkos Monastery in the Troodos mountains",
+      "width": 259,
+      "height": 194,
+      "title": "Kykkos Monastery",
+      "text": "Forty five minutes inland and a thousand metres up, through cedar forest. Considerably cooler than the coast in August."
+    },
+    {
+      "image": "assets/images/paphos-mosaics.jpg",
+      "alt": "Roman floor mosaics in the archaeological park at Paphos",
+      "width": 290,
+      "height": 174,
+      "title": "The Paphos mosaics",
+      "text": "Roman floors in the harbour archaeological park, a UNESCO world heritage site, thirty minutes south."
+    },
+    {
+      "image": "assets/images/cyprus-fish-meze.jpg",
+      "alt": "A spread of small dishes making up a Cypriot fish meze",
+      "width": 271,
+      "height": 186,
+      "title": "Fish meze at the harbour",
+      "text": "The tavernas along Latchi harbour serve a fish meze of a dozen or more small plates. Worth booking ahead in summer."
+    }
+  ]
+}
