@@ -36,8 +36,11 @@ tools/
   image-manifest.json
 assets/
   css/styles.css
+  css/fonts.css     @font-face for the self-hosted faces
   js/script.js
+  fonts/            woff2, latin and latin-ext only
   favicon.svg
+  icons.svg         source sprite, inlined into each page
   images/           .jpg fallback plus -640/-1280/-1920 .avif and .webp
   images/unsorted/  unidentified, needs review before use
 ```
@@ -155,6 +158,16 @@ a decision for the Astro migration.
 - Keep `sizes` honest. It must describe the rendered width, or the browser picks a variant
   that is too large and the whole exercise is wasted.
 - Self host everything. Do not hotlink third party CDNs.
+
+## Icons
+
+Six glyphs in `assets/icons.svg`, inlined into each page as a hidden sprite and used with
+`<svg class="icon"><use href="#i-name"></use></svg>`. Sized in `em` and inheriting
+`currentColor`, so they follow the type scale and the palette.
+
+Inlined rather than linked because `<use href="file.svg#id">` against an external file is
+unreliable in Safari. If you add an icon, add the symbol to `assets/icons.svg` and to the
+inlined copy in every page.
 
 ## CSS
 
@@ -283,8 +296,21 @@ every load. It is now behind a click-to-load facade in `initMapFacade`.
 photograph combined and sets cookies before the consent banner is answered. The same
 caution applies to any new third party embed.
 
-Font Awesome is the next largest third party at roughly 230KB. Replacing the handful of
-icons actually used with inline SVG would remove it entirely.
+**There are no third parties left.** Font Awesome was replaced with an inline SVG sprite
+and the fonts are self-hosted. No page makes a request outside its own origin until a
+visitor accepts analytics or clicks to load the map. Keep it that way: a new webfont link,
+icon kit or embed undoes the largest win in the project and, for anything that sees the
+visitor's IP, reopens the GDPR problem.
+
+Measured cold, desktop, 1440px:
+
+| Page | Before any of this work | Now |
+|---|---|---|
+| index.html | 2386 KB | 89 KB |
+| Pictures.html | ~35 MB | 263 KB |
+| Contact.html | 262 KB | 58 KB |
+
+A five page visit with a warm cache totals 292 KB.
 
 Then check by hand:
 
