@@ -97,11 +97,9 @@
       scrim.classList.toggle('menu-open', isOpen);
     }
 
-    const icon = toggle.querySelector('i');
-    if (icon) {
-      icon.classList.toggle('fa-bars', !isOpen);
-      icon.classList.toggle('fa-times', isOpen);
-    }
+    // Icons are SVG sprite references now, so swap the symbol not a class.
+    const use = toggle.querySelector('use');
+    if (use) use.setAttribute('href', isOpen ? '#i-times' : '#i-bars');
   }
 
   toggle.addEventListener('click', function () {

@@ -29,7 +29,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <script type="application/ld+json">
@@ -92,6 +91,32 @@
 </head>
 <body>
 
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 6 9 17l-5-5"/>
+    </symbol>
+    <symbol id="i-envelope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <path d="m2.5 6.5 9.5 7 9.5-7"/>
+    </symbol>
+    <symbol id="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </symbol>
+    <symbol id="i-times" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M18 6 6 18M6 6l12 12"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m15 18-6-6 6-6"/>
+    </symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m9 18 6-6-6-6"/>
+    </symbol>
+  </svg>
+
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header site-header--overlay">
@@ -100,7 +125,7 @@
 
     <button class="nav-toggle" id="nav-toggle" type="button"
             aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
-      <i class="fas fa-bars" aria-hidden="true"></i>
+      <svg class="icon" aria-hidden="true"><use href="#i-bars"></use></svg>
     </button>
 
     <nav class="nav" id="primary-nav" aria-label="Primary">
@@ -231,10 +256,10 @@
           <div class="price-card__top"><h3>Winter</h3></div>
           <p class="price-card__amount"><b>&euro;1,999</b><span>/ 7 nights</span></p>
           <ul>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Private nine metre pool</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Sleeps up to seven</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Two en suite bathrooms</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Early check in and late check out subject to availability</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Private nine metre pool</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Sleeps up to seven</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Two en suite bathrooms</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Early check in and late check out subject to availability</li>
           </ul>
           <a class="btn btn--outline" href="Contact.html">Enquire about winter</a>
         </article>
@@ -243,10 +268,10 @@
           <div class="price-card__top"><h3>Autumn</h3></div>
           <p class="price-card__amount"><b>&euro;2,499</b><span>/ 7 nights</span></p>
           <ul>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Private nine metre pool</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Sleeps up to seven</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Two en suite bathrooms</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Early check in and late check out subject to availability</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Private nine metre pool</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Sleeps up to seven</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Two en suite bathrooms</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Early check in and late check out subject to availability</li>
           </ul>
           <a class="btn btn--outline" href="Contact.html">Enquire about autumn</a>
         </article>
@@ -258,10 +283,10 @@
           </div>
           <p class="price-card__amount"><b>&euro;2,999</b><span>/ 7 nights</span></p>
           <ul>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Private nine metre pool</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Sleeps up to seven</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Two en suite bathrooms</li>
-            <li><i class="fas fa-check" aria-hidden="true"></i>Late check out subject to availability</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Private nine metre pool</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Sleeps up to seven</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Two en suite bathrooms</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Late check out subject to availability</li>
           </ul>
           <a class="btn btn--primary" href="Contact.html">Enquire about summer</a>
         </article>
@@ -284,7 +309,7 @@
                 data-map-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13065.940061221007!2d32.3641692!3d35.0446112!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e77574ceb5c1db%3A0xd9909e16d21e68e3!2sVilla%20Pergia!5e0!3m2!1sen!2s!4v1678478671017!5m2!1sen!2s"
                 data-map-title="Map showing Villa Pergia in Neo Chorio, Latchi">
           <span class="map-facade__inner">
-            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
             <span class="map-facade__label">Show the map</span>
             <span class="map-facade__note">Loads Google Maps, which sets its own cookies</span>
           </span>
@@ -318,7 +343,7 @@
         </div>
         <div class="footer-social social-spaced">
           <a href="mailto:contact@villapergia.com" aria-label="Email Villa Pergia">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg>
           </a>
         </div>
       </div>
