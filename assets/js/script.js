@@ -226,3 +226,24 @@
     startX = null;
   }, { passive: true });
 })();
+
+// --------------------------------------------------------------------------
+// Map facade
+//
+// The Google Maps embed costs roughly 1.6MB of JavaScript and sets its own
+// cookies, so it is not loaded until someone asks for it.
+// --------------------------------------------------------------------------
+(function initMapFacade() {
+  const button = document.getElementById('map-load');
+  if (!button) return;
+
+  button.addEventListener('click', function () {
+    const frame = document.createElement('iframe');
+    frame.src = button.dataset.mapSrc;
+    frame.title = button.dataset.mapTitle;
+    frame.loading = 'lazy';
+    frame.referrerPolicy = 'no-referrer-when-downgrade';
+    frame.allowFullscreen = true;
+    button.replaceWith(frame);
+  });
+})();
