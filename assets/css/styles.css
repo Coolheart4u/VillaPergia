@@ -219,7 +219,11 @@ p { max-width: var(--measure); }
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  /* Above the nav panel and its scrim, both of which are set in the 900px
+     block below. The toggle lives in here, so if the header sinks under the
+     scrim the button becomes untappable while the menu is open and there is
+     no way to close it. Layer order: header 120 > nav 110 > scrim 105. */
+  z-index: 120;
   background: var(--sand-50);
   border-bottom: 1px solid var(--sand-200);
   transition: background-color var(--ease), border-color var(--ease), box-shadow var(--ease);
@@ -265,6 +269,15 @@ p { max-width: var(--measure); }
 /* Over the hero photograph only */
 .site-header--overlay:not(.is-stuck) .brand,
 .site-header--overlay:not(.is-stuck) .nav-toggle { color: var(--white); }
+
+/* While the menu is open the header sits above the scrim, so the close icon
+   would be white on a dimmed ground. Give the bar its solid treatment. */
+body.nav-locked .site-header {
+  background: var(--sand-50);
+  border-bottom-color: var(--sand-200);
+}
+body.nav-locked .site-header .brand,
+body.nav-locked .site-header .nav-toggle { color: var(--ink-900); }
 
 .nav__list {
   display: flex;
@@ -938,10 +951,15 @@ p { max-width: var(--measure); }
 
   .nav {
     position: fixed;
-    inset: 0 0 0 auto;
+    /* Starts below the header bar rather than underlapping it, so the toggle
+       is never covered and the menu can always be closed. Relying on z-index
+       alone did not work: the panel is a sibling of the header and still
+       intercepted pointer events over the button. */
+    inset: var(--header-h) 0 0 auto;
     width: min(20rem, 82vw);
     background: var(--sand-50);
-    padding: calc(var(--header-h) + var(--space-5)) var(--space-5) var(--space-5);
+    border-left: 1px solid var(--sand-200);
+    padding: var(--space-5);
     transform: translateX(100%);
     transition: transform 240ms ease-out;
     z-index: 110;
@@ -972,7 +990,7 @@ p { max-width: var(--measure); }
   .nav-scrim {
     display: block;
     position: fixed;
-    inset: 0;
+    inset: var(--header-h) 0 0 0;
     background: rgba(14, 32, 36, .5);
     opacity: 0;
     pointer-events: none;
