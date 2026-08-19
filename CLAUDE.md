@@ -26,6 +26,7 @@ Visits.html         The area
 Contact.html        Enquiry form
 thank-you.html      Form confirmation, noindex
 privacy.html        Privacy policy
+404.html            Not found, served by GitHub Pages, noindex
 sitemap.xml
 robots.txt
 CNAME
@@ -252,7 +253,7 @@ cd /path/to/VillaPergia && python3 -m http.server 8123 &
 node /tmp/shots/check.js
 ```
 
-A useful check script renders every page at 375, 768 and 1440 and asserts:
+`tools/check-pages.js` renders every page at 375, 768 and 1440 and asserts:
 console is clean, no request returns 4xx, `documentElement.scrollWidth` never exceeds
 `clientWidth`, no cookie exists before consent, and the nav toggle is visible below 900px
 and hidden above it.
@@ -262,6 +263,28 @@ Three real bugs were found this way and would not have been found any other way:
 - the sticky observer stripped `is-stuck`, leaving white header type on cream
 - `input[type=date]` has a min-content width that made two of them overflow at 375px
 - `backdrop-filter` on the header re-anchored the fixed nav panel and widened the page
+
+Run axe-core too. It found seventeen violations that the structural checks passed:
+
+```
+npm install @axe-core/playwright axe-core
+```
+
+Assert zero violations against `wcag2a`, `wcag2aa`, `wcag21a`, `wcag21aa` and
+`best-practice` at 375 and 1440.
+
+### Third party weight
+
+Measure transferred bytes, not just image bytes. The homepage was 2386KB while only
+205KB of it was images: the Google Maps embed was pulling roughly 1.6MB of JavaScript on
+every load. It is now behind a click-to-load facade in `initMapFacade`.
+
+**Do not put an eager Google Maps iframe back on any page.** It costs more than every
+photograph combined and sets cookies before the consent banner is answered. The same
+caution applies to any new third party embed.
+
+Font Awesome is the next largest third party at roughly 230KB. Replacing the handful of
+icons actually used with inline SVG would remove it entirely.
 
 Then check by hand:
 
