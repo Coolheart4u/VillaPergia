@@ -30,7 +30,16 @@ privacy.html        Privacy policy
 sitemap.xml
 robots.txt
 CNAME
+content/            editable copy, the source of truth for the marked regions
+  site.json         contact details, address, check in and out
+  rates.json        the three seasons, includes, peak flag
+  home.json         hero, intro, feature cards
+  gallery.json      photographs and alt text
+  area.json         area cards
+  amenities.json    amenity groups and house rules
 tools/
+  build.mjs               renders pages from content/
+  check-build.mjs         fails if the HTML is stale
   build-images.js         regenerates AVIF and WebP derivatives
   apply-picture-markup.py rewrites img tags from the manifest
   image-manifest.json
@@ -48,6 +57,33 @@ assets/
 Page filenames keep their original capitalisation on purpose. Renaming them would break
 every URL Google has indexed, and GitHub Pages cannot issue redirects. Lowercase them
 during the Astro migration, where redirects can be configured properly.
+
+## Content and the build step
+
+Copy that anyone might reasonably want to change lives in `content/*.json`, not in the
+markup. `tools/build.mjs` renders it into the pages, rewriting only the regions between
+`<!-- BUILD:name -->` and `<!-- /BUILD:name -->`. Everything outside those markers is
+hand authored and the build never touches it.
+
+The rendered HTML is committed. The site is still plain static files with no build step at
+serve time, and would still work on GitHub Pages exactly as before. The build is an
+authoring convenience, not a runtime dependency.
+
+```
+node tools/build.mjs        # render pages from content/
+node tools/check-build.mjs  # fail if the committed HTML is stale
+```
+
+**Edit the JSON, not the marked HTML.** Anything you type between BUILD markers is
+overwritten on the next build. If a region needs to change shape rather than wording, edit
+the corresponding block function in `tools/build.mjs`.
+
+Run `check-build.mjs` before committing. A page that disagrees with its data file is worse
+than no build step at all, because there is then no way to tell which one is right.
+
+Two things this caught while it was being written, both of which would otherwise have
+shipped: an extraction regex that silently dropped the "Languages we speak" amenity group,
+and a template that lost `class="hero__media"` and put white header type on cream.
 
 ## Style rules
 
