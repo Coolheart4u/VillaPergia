@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "eyebrow": "Latchi, Cyprus",
+    "heading": "A private beach villa, fifty metres from the sea",
+    "text": "Three bedrooms, two of them en suite, and a nine metre pool of your own. Sleeps up to seven.",
+    "image": "assets/images/pool-garden.jpg",
+    "alt": "The private swimming pool at Villa Pergia, edged with flagstones, roses and an orange tree"
+  },
+  "about_eyebrow": "The villa",
+  "about_heading": "Designed to be a sanctuary",
+  "about_text": "Villa Pergia sits in the quiet coastal village of Latchi, on the edge of the Akamas peninsula. The beach is a two minute walk. Latchi harbour and the Baths of Aphrodite are both a five minute drive, and the Blue Lagoon is a morning boat trip away.",
+  "features": [
+    {
+      "image": "assets/images/pool-terrace.jpg",
+      "alt": "The nine metre swimming pool with sun loungers and the pergola shaded terrace behind it",
+      "width": 1125,
+      "height": 831,
+      "title": "A nine metre private pool",
+      "text": "Yours alone, with loungers, a shaded pergola and a barbecue on the terrace beside it."
+    },
+    {
+      "image": "assets/images/kitchen-breakfast-bar.jpg",
+      "alt": "Open plan kitchen with a granite breakfast bar, bar stools and a dining table set for six",
+      "width": 1600,
+      "height": 1200,
+      "title": "Open plan kitchen and dining",
+      "text": "Dishwasher, washing machine, oven and hob, with a table for six and a breakfast bar."
+    },
+    {
+      "image": "assets/images/bedroom-double.jpg",
+      "alt": "Double bedroom with a wooden bed frame, bedside tables and a window onto the garden",
+      "width": 1600,
+      "height": 1200,
+      "title": "Three bedrooms, sleeping seven",
+      "text": "One double and two twins. The two upstairs rooms are en suite, both opening onto balconies."
+    },
+    {
+      "image": "assets/images/latchi-beach.jpg",
+      "alt": "The unspoilt sand and clear shallow water of Latchi beach",
+      "width": 1125,
+      "height": 636,
+      "title": "The beach, fifty metres away",
+      "text": "Quiet and unspoilt. Loggerhead turtles nest along this stretch of coast in summer."
+    }
+  ],
+  "location_heading": "Where the villa is",
+  "location_text": "Petrou Christou 9, Neo Chorio, Paphos. Around an hour from Paphos airport and two hours from Larnaca."
+}

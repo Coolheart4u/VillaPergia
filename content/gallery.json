@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "image": "assets/images/pool-garden.jpg",
+      "alt": "The private swimming pool edged with flagstones, roses and an orange tree",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "image": "assets/images/terrace-dining-pool-sea.jpg",
+      "alt": "A table set for dinner under the pergola, with the pool and the sea beyond",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/pool-terrace.jpg",
+      "alt": "The pool seen from the water's edge, with sun loungers and the shaded dining terrace behind",
+      "width": 1125,
+      "height": 831
+    },
+    {
+      "image": "assets/images/villa-featured.jpg",
+      "alt": "Villa Pergia seen from the garden",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "image": "assets/images/kitchen-breakfast-bar.jpg",
+      "alt": "Open plan kitchen with a granite breakfast bar, bar stools and a dining table set for six",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "image": "assets/images/open-plan-kitchen-dining.jpg",
+      "alt": "The kitchen and dining area, with tall windows looking out to the garden",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/dining-table-sea-view.jpg",
+      "alt": "A bowl of oranges and lemons on the dining table, framed by two narrow windows onto the sea",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/living-room.jpg",
+      "alt": "The living room with two sofas, a low table and a window onto the orange tree",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "image": "assets/images/dining-area-from-landing.jpg",
+      "alt": "The dining area seen from the landing above",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/bedroom-double.jpg",
+      "alt": "Double bedroom with a wooden bed frame and bedside tables",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "image": "assets/images/bedroom-double-balcony.jpg",
+      "alt": "Double bedroom with a dressing table, mirror and a door onto the balcony",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "image": "assets/images/bedroom-twin.jpg",
+      "alt": "Twin bedroom with two single beds either side of a window",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/bedroom-upstairs-view.jpg",
+      "alt": "An upstairs bedroom looking out towards the sea",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/bathroom-ensuite.jpg",
+      "alt": "One of the two en suite bathrooms on the upper floor",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/bathroom-downstairs.jpg",
+      "alt": "The bathroom serving the ground floor bedroom",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/marble-staircase.jpg",
+      "alt": "The marble staircase leading to the first floor",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/entrance-hall.jpg",
+      "alt": "The entrance hall inside the front door",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/villa-entrance.jpg",
+      "alt": "The approach to the villa's front entrance",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "image": "assets/images/villa-front-door.jpg",
+      "alt": "The front door of Villa Pergia",
+      "width": 612,
+      "height": 900
+    },
+    {
+      "image": "assets/images/balcony-sea-view.jpg",
+      "alt": "The view along the coast from one of the upstairs balconies",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "image": "assets/images/sea-view-from-terrace.jpg",
+      "alt": "The Mediterranean seen over pine and olive trees from the terrace",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "image": "assets/images/sea-view-from-bedroom.jpg",
+      "alt": "View from a bedroom window across scrubland to the sea and offshore rocks",
+      "width": 1600,
+      "height": 1200
+    }
+  ]
+}
