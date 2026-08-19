@@ -20,12 +20,12 @@
 
   /* Action: deep Aegean. The only accent that carries interaction. */
   --sea-800: #0E5561;
-  --sea-600: #167C8C;
+  --sea-600: #12707E;
   --sea-400: #4BA8B5;
   --sea-100: #DFEDEF;
 
   /* Reserved for peak season and nothing else */
-  --clay-600: #B4573A;
+  --clay-600: #A24A2E;
   --clay-100: #F6E7E0;
 
   --white: #FFFFFF;
@@ -94,8 +94,22 @@ img { height: auto; }
 
 ul, ol { list-style: none; }
 
-a { color: var(--sea-800); text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 3px; }
+/* Underlined by default. A link inside a paragraph that differs from the
+   surrounding text only by colour fails WCAG 1.4.1, and ours differed by
+   1.2:1. Components that are unambiguously interactive opt out below. */
+a {
+  color: var(--sea-800);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+.brand, .nav__link, .btn, .skip-link,
+.footer-links a, .footer-social a,
+.gallery-item, .area-card { text-decoration: none; }
+.brand:hover, .nav__link:hover, .btn:hover, .skip-link:hover,
+.footer-links a:hover, .footer-social a:hover { text-decoration: none; }
 
 button, input, textarea, select { font: inherit; color: inherit; }
 
@@ -511,7 +525,14 @@ p { max-width: var(--measure); }
 }
 
 .site-footer a { color: var(--sand-100); }
-.site-footer h3 { color: var(--white); margin-bottom: var(--space-3); }
+.site-footer h2 {
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -.005em;
+  margin-bottom: var(--space-3);
+}
 
 .footer-grid {
   display: grid;
