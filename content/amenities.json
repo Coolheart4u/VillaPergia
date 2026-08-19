@@ -1,0 +1,159 @@
+{
+  "intro": "The whole villa is yours: nothing here is shared with other guests. Three bedrooms sleeping up to seven, a private nine metre pool, and a fully equipped kitchen.",
+  "groups": [
+    {
+      "title": "Outdoors and pool",
+      "items": [
+        "Private 9m pool",
+        "Open all year",
+        "Sun loungers",
+        "Beach umbrellas",
+        "Shaded terrace",
+        "Outdoor dining",
+        "Barbecue",
+        "Garden",
+        "Two balconies",
+        "50m from the beach"
+      ]
+    },
+    {
+      "title": "Kitchen",
+      "items": [
+        "Oven and hob",
+        "Dishwasher",
+        "Washing machine",
+        "Refrigerator",
+        "Microwave",
+        "Toaster",
+        "Electric kettle",
+        "Coffee machine",
+        "Kitchenware",
+        "Dining table for six",
+        "Breakfast bar",
+        "High chair on request"
+      ]
+    },
+    {
+      "title": "Bedrooms",
+      "items": [
+        "One double, two twins",
+        "Sleeps up to seven",
+        "Linens provided",
+        "Wardrobes",
+        "Socket beside the bed",
+        "Crib on request"
+      ]
+    },
+    {
+      "title": "Bathrooms",
+      "items": [
+        "Two en suite, upstairs",
+        "Third bathroom, ground floor",
+        "Bath and shower",
+        "Towels provided",
+        "Toiletries",
+        "Hairdryer"
+      ]
+    },
+    {
+      "title": "Living areas",
+      "items": [
+        "Living room",
+        "Dining area",
+        "Sofas and sitting area",
+        "Desk",
+        "Marble and tiled floors"
+      ]
+    },
+    {
+      "title": "Comfort and practical",
+      "items": [
+        "Free WiFi",
+        "Air conditioning (extra charge)",
+        "Heating",
+        "Television",
+        "DVD player and radio",
+        "Iron and ironing board",
+        "Drying rack",
+        "Adaptors",
+        "Safe",
+        "Cleaning products"
+      ]
+    },
+    {
+      "title": "Parking and getting around",
+      "items": [
+        "Free private parking on site",
+        "No reservation needed",
+        "Street parking",
+        "Private entrance",
+        "Airport transfer (extra charge)",
+        "Bicycle hire (extra charge)"
+      ]
+    },
+    {
+      "title": "Nearby",
+      "items": [
+        "Swimming",
+        "Water sports (extra charge)",
+        "Diving (extra charge)",
+        "Windsurfing (extra charge)",
+        "Canoeing (extra charge)",
+        "Fishing (extra charge)",
+        "Hiking in the Akamas"
+      ]
+    },
+    {
+      "title": "Access",
+      "items": [
+        "Bedroom and bathroom on the ground floor",
+        "Upper floor by stairs only"
+      ],
+      "note": "Please get in touch before booking if anyone in your party has limited mobility, so we can tell you honestly whether the villa will suit."
+    },
+    {
+      "title": "Languages we speak",
+      "items": [
+        "English",
+        "Greek",
+        "French",
+        "German",
+        "Russian"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "title": "Check in",
+      "text": "2:00pm to 8:00pm. Please let us know your arrival time in advance."
+    },
+    {
+      "title": "Check out",
+      "text": "8:00am to 11:00am. Later check out is sometimes possible, subject to availability."
+    },
+    {
+      "title": "Payment",
+      "text": "Payment before arrival by bank transfer. We will send instructions once your dates are confirmed. The balance is paid on arrival."
+    },
+    {
+      "title": "Security deposit",
+      "text": "€100 on arrival, refunded in full at check out subject to an inspection of the villa."
+    },
+    {
+      "title": "Children",
+      "text": "Children of all ages are welcome and there is no minimum age for check in. One crib is available on request, free of charge, subject to availability."
+    },
+    {
+      "title": "Cancellation",
+      "text": "Terms depend on the season and the dates booked. Send us your dates and we will set out exactly what applies."
+    },
+    {
+      "title": "Smoking",
+      "text": "The villa is entirely non smoking, indoors and out."
+    },
+    {
+      "title": "Pets",
+      "text": "We are not able to accept pets."
+    }
+  ]
+}
