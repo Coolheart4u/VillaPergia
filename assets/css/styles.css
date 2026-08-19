@@ -90,6 +90,18 @@ body {
 body.nav-locked { overflow: hidden; }
 
 img, picture, video, iframe { max-width: 100%; display: block; }
+
+/* Icons are an inline SVG sprite, not a webfont. Font Awesome was roughly
+   230KB of script and webfonts to deliver six glyphs. */
+.icon-sprite { display: none; }
+.icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  vertical-align: -.125em;
+  fill: none;
+  stroke: currentColor;
+}
 img { height: auto; }
 
 ul, ol { list-style: none; }
@@ -248,6 +260,7 @@ p { max-width: var(--measure); }
   font-size: 1.5rem;
   color: var(--ink-900);
 }
+.nav-toggle .icon { width: 1.5rem; height: 1.5rem; }
 
 /* Over the hero photograph only */
 .site-header--overlay:not(.is-stuck) .brand,
@@ -490,7 +503,7 @@ p { max-width: var(--measure); }
   color: var(--ink-700);
 }
 .price-card li { display: flex; gap: var(--space-2); align-items: flex-start; }
-.price-card li i { color: var(--sea-600); margin-top: .35em; flex: none; }
+.price-card li .icon { color: var(--sea-600); margin-top: .3em; }
 
 .price-card .btn { margin-top: auto; }
 
@@ -529,7 +542,7 @@ p { max-width: var(--measure); }
   transition: background-color var(--ease);
 }
 .map-facade__inner { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); text-align: center; padding: var(--space-5); }
-.map-facade i { font-size: 2rem; }
+.map-facade .icon { width: 2rem; height: 2rem; }
 .map-facade__label { font-weight: 600; font-size: 1.05rem; }
 .map-facade__note { font-size: .85rem; opacity: .85; }
 .map-facade:hover .map-facade__label { text-decoration: underline; text-underline-offset: 3px; }
@@ -566,6 +579,7 @@ p { max-width: var(--measure); }
 .footer-links { display: flex; flex-direction: column; gap: var(--space-2); }
 
 .footer-social { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.footer-social .icon { width: 1.15rem; height: 1.15rem; }
 .footer-social a {
   width: 44px;
   height: 44px;
@@ -690,7 +704,7 @@ p { max-width: var(--measure); }
   font-size: .875rem;
   color: var(--ink-700);
 }
-.amenity i { color: var(--sea-600); font-size: .8em; }
+.amenity .icon { color: var(--sea-600); width: .85em; height: .85em; }
 
 .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-4); }
 .rule {
@@ -782,9 +796,9 @@ p { max-width: var(--measure); }
   border: 1px solid rgba(255, 255, 255, .25);
   border-radius: 999px;
   cursor: pointer;
-  font-size: 1.25rem;
   transition: background-color var(--ease);
 }
+.lightbox__btn .icon { width: 1.25rem; height: 1.25rem; }
 .lightbox__btn:hover { background: rgba(0, 0, 0, .8); }
 
 /* Kept visible on mobile. Previously display:none below 768px, which left no
@@ -830,7 +844,7 @@ p { max-width: var(--measure); }
 .contact-aside h2 { font-size: 1.6rem; margin-bottom: var(--space-4); }
 .contact-aside .footer-links { gap: var(--space-3); margin-bottom: var(--space-6); }
 .contact-line { display: flex; gap: var(--space-3); align-items: baseline; }
-.contact-line i { color: var(--sea-600); }
+.contact-line .icon { color: var(--sea-600); margin-top: .25em; }
 .contact-notes { display: flex; flex-direction: column; gap: var(--space-3); color: var(--ink-500); font-size: .95rem; }
 .form-note { margin-top: var(--space-4); font-size: .85rem; color: var(--ink-500); }
 .muted { color: var(--ink-500); }

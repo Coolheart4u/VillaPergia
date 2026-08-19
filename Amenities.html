@@ -29,10 +29,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/df75766af7.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 6 9 17l-5-5"/>
+    </symbol>
+    <symbol id="i-envelope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <path d="m2.5 6.5 9.5 7 9.5-7"/>
+    </symbol>
+    <symbol id="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </symbol>
+    <symbol id="i-times" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M18 6 6 18M6 6l12 12"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m15 18-6-6 6-6"/>
+    </symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m9 18 6-6-6-6"/>
+    </symbol>
+  </svg>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -42,7 +67,7 @@
 
     <button class="nav-toggle" id="nav-toggle" type="button"
             aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
-      <i class="fas fa-bars" aria-hidden="true"></i>
+      <svg class="icon" aria-hidden="true"><use href="#i-bars"></use></svg>
     </button>
 
     <nav class="nav" id="primary-nav" aria-label="Primary">
@@ -77,118 +102,118 @@
         <div class="amenity-group">
           <h2>Outdoors and pool</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Private 9m pool</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Open all year</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Sun loungers</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Beach umbrellas</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Shaded terrace</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Outdoor dining</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Barbecue</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Garden</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Two balconies</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>50m from the beach</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Private 9m pool</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Open all year</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Sun loungers</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Beach umbrellas</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Shaded terrace</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Outdoor dining</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Barbecue</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Garden</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Two balconies</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>50m from the beach</span>
           </div>
         </div>
 
         <div class="amenity-group">
           <h2>Kitchen</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Oven and hob</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Dishwasher</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Washing machine</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Refrigerator</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Microwave</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Toaster</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Electric kettle</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Coffee machine</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Kitchenware</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Dining table for six</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Breakfast bar</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>High chair on request</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Oven and hob</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Dishwasher</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Washing machine</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Refrigerator</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Microwave</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Toaster</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Electric kettle</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Coffee machine</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Kitchenware</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Dining table for six</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Breakfast bar</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>High chair on request</span>
           </div>
         </div>
 
         <div class="amenity-group">
           <h2>Bedrooms</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>One double, two twins</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Sleeps up to seven</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Linens provided</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Wardrobes</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Socket beside the bed</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Crib on request</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>One double, two twins</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Sleeps up to seven</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Linens provided</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Wardrobes</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Socket beside the bed</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Crib on request</span>
           </div>
         </div>
 
         <div class="amenity-group">
           <h2>Bathrooms</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Two en suite, upstairs</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Third bathroom, ground floor</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Bath and shower</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Towels provided</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Toiletries</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Hairdryer</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Two en suite, upstairs</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Third bathroom, ground floor</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Bath and shower</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Towels provided</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Toiletries</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Hairdryer</span>
           </div>
         </div>
 
         <div class="amenity-group">
           <h2>Living areas</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Living room</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Dining area</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Sofas and sitting area</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Desk</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Marble and tiled floors</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Living room</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Dining area</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Sofas and sitting area</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Desk</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Marble and tiled floors</span>
           </div>
         </div>
 
         <div class="amenity-group">
           <h2>Comfort and practical</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Free WiFi</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Air conditioning (extra charge)</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Heating</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Television</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>DVD player and radio</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Iron and ironing board</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Drying rack</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Adaptors</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Safe</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Cleaning products</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Free WiFi</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Air conditioning (extra charge)</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Heating</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Television</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>DVD player and radio</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Iron and ironing board</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Drying rack</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Adaptors</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Safe</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Cleaning products</span>
           </div>
         </div>
 
         <div class="amenity-group">
           <h2>Parking and getting around</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Free private parking on site</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>No reservation needed</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Street parking</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Private entrance</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Airport transfer (extra charge)</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Bicycle hire (extra charge)</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Free private parking on site</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>No reservation needed</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Street parking</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Private entrance</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Airport transfer (extra charge)</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Bicycle hire (extra charge)</span>
           </div>
         </div>
 
         <div class="amenity-group">
           <h2>Nearby</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Swimming</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Water sports (extra charge)</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Diving (extra charge)</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Windsurfing (extra charge)</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Canoeing (extra charge)</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Fishing (extra charge)</span>
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Hiking in the Akamas</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Swimming</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Water sports (extra charge)</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Diving (extra charge)</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Windsurfing (extra charge)</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Canoeing (extra charge)</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Fishing (extra charge)</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Hiking in the Akamas</span>
           </div>
         </div>
 
         <div class="amenity-group">
           <h2>Access</h2>
           <div class="amenity-list">
-            <span class="amenity"><i class="fas fa-check" aria-hidden="true"></i>Bedroom and bathroom on the ground floor</span>
-            <span class="amenity"><i class="fas fa-times" aria-hidden="true"></i>Upper floor by stairs only</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Bedroom and bathroom on the ground floor</span>
+            <span class="amenity"><svg class="icon" aria-hidden="true"><use href="#i-times"></use></svg>Upper floor by stairs only</span>
           </div>
           <p class="amenity-note">
             Please get in touch before booking if anyone in your party has limited mobility, so we
@@ -280,7 +305,7 @@
         </div>
         <div class="footer-social social-spaced">
           <a href="mailto:contact@villapergia.com" aria-label="Email Villa Pergia">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg>
           </a>
         </div>
       </div>
