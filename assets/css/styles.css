@@ -513,6 +513,27 @@ p { max-width: var(--measure); }
 }
 .map-frame iframe { width: 100%; height: 100%; border: 0; }
 
+/* Click to load. The Google Maps embed pulls roughly 1.6MB of JavaScript and
+   sets its own cookies, neither of which should happen on every page load. */
+.map-facade {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(rgba(14, 85, 97, .55), rgba(14, 85, 97, .55)),
+    repeating-linear-gradient(45deg, var(--sand-100) 0 14px, var(--sand-200) 14px 28px);
+  color: var(--white);
+  transition: background-color var(--ease);
+}
+.map-facade__inner { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); text-align: center; padding: var(--space-5); }
+.map-facade i { font-size: 2rem; }
+.map-facade__label { font-weight: 600; font-size: 1.05rem; }
+.map-facade__note { font-size: .85rem; opacity: .85; }
+.map-facade:hover .map-facade__label { text-decoration: underline; text-underline-offset: 3px; }
+
 /* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
@@ -814,7 +835,7 @@ p { max-width: var(--measure); }
 .form-note { margin-top: var(--space-4); font-size: .85rem; color: var(--ink-500); }
 .muted { color: var(--ink-500); }
 .btn--block { width: 100%; }
-.stack-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.stack-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-5); }
 .social-spaced { margin-top: var(--space-4); }
 .amenity-note { margin-top: var(--space-3); font-size: .9rem; color: var(--ink-500); }
 
